@@ -3,7 +3,8 @@
     "TITLE": "2D20 Helper for Fallout",
     "SUBTITLE": " Outils et aides",
     "SECTIONS": {
-      "MAIN": "Aides de jeu"
+      "MAIN": "Aides de jeu",
+      "BESTIARY": "Bestiaire"
     },
     "BACK": "Retour",
     "LANGUAGEPICKER": "Choix de la langue",
@@ -17,7 +18,16 @@
       "ANDROIDVERSION": "Version Android",
       "DISEASES": "Maladies",
       "MERCHANT": "Marchand Automatique",
-      "MOBLEVELING": "Amélioration ennemis"
+      "MOBLEVELING": "Amélioration ennemis",
+      "ANIMALS": "Animaux & Insectes",
+      "ROBOTS": "Robots",
+      "SYNTHS": "Synthétiques",
+      "HUMANOIDS": "Humanoides mutants",
+      "SUPERMUTANTS": "Super-mutants",
+      "TURRETS": "Tourelles",
+      "BOS": "Confrérie de l'acier",
+      "RAIDERS": "Pillards",
+      "OTHERS": "Habitants des terres désolées"
     }
   },
   "HOME": {

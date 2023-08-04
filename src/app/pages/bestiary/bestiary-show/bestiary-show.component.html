@@ -1,0 +1,17 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="back()">{{"APP.BACK" | translate}}</ion-button>
+      </ion-buttons>
+      <ion-title>{{mob.name}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+
+    {{mob | json }}
+  </ion-content>
+</ion-app>
+
+
