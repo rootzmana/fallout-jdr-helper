@@ -1,7 +1,7 @@
-import {Character, Creature, SubType} from "./bestiary.model";
+import {Creature, SubType} from "./bestiary.model";
 import {ANIMALS} from "./animals";
 
-export const getBestiaryList = (subType: SubType): (Creature | Character)[] => {
+export const getBestiaryList = (subType: SubType): Creature[] => {
   switch (subType) {
     case SubType.ANIMALS:
       return ANIMALS;

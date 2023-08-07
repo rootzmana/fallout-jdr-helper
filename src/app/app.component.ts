@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
         this.buildMenu('AUTOLOOT', 'auto-loot', 'bag-handle'),
         this.buildMenu('MERCHANT', 'merchant', 'cash'),
         this.buildMenu('DISEASES', 'diseases', 'medical'),
-        this.buildMenu('MOBLEVELING', 'mob-leveling', 'ribbon'),
+        this.buildMenu('BESTIARY', 'mob-leveling', 'ribbon'),
       ]
     });
     this.sections.push({

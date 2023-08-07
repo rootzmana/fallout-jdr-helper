@@ -1,0 +1,21 @@
+ion-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: solid 1px var(--dv-background-accent-dark);
+
+  ul > li {
+    list-style-type: none
+  }
+}
+
+ion-col.header {
+  background-color: var(--dv-background-accent);
+  color: #fff;
+}
+
+.details {
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {Character, Creature, SubType} from "../../../data/bestiary/fr/bestiary.model";
+import {Creature, SubType} from "../../../data/bestiary/fr/bestiary.model";
 import {getBestiaryList} from "../../../data/bestiary/fr/bestiary-utils";
 
 @Component({
@@ -11,8 +11,8 @@ import {getBestiaryList} from "../../../data/bestiary/fr/bestiary-utils";
 export class BestiaryListComponent implements OnInit {
 
   subType: string;
-  bestiary: (Creature | Character)[] = [];
-  filteredBestiary: (Creature | Character)[] = [];
+  bestiary: Creature[] = [];
+  filteredBestiary: Creature[] = [];
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
   }
@@ -25,7 +25,7 @@ export class BestiaryListComponent implements OnInit {
     });
   }
 
-  showDetails(mob: Creature | Character) {
+  showDetails(mob: Creature) {
     this.router.navigateByUrl('/bestiary/show/' + mob.name, {state: {mob: mob}});
 
   }

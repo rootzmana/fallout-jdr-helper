@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {Character, Creature} from "../../../data/bestiary/fr/bestiary.model";
+import {BestiaryType, Creature} from "../../../data/bestiary/fr/bestiary.model";
 import {Location} from '@angular/common';
 
 @Component({
@@ -9,8 +9,10 @@ import {Location} from '@angular/common';
   styleUrls: ['./bestiary-show.component.scss'],
 })
 export class BestiaryShowComponent implements OnInit {
-  private mob: Creature | Character;
+  mob: Creature;
   private subType: string;
+  CREATURE = BestiaryType.CREATURE;
+  CHARACTER = BestiaryType.CHARACTER;
 
   constructor(private router: Router, private location: Location) {
   }

@@ -18,7 +18,7 @@
       "ANDROIDVERSION": "Version Android",
       "DISEASES": "Maladies",
       "MERCHANT": "Marchand Automatique",
-      "MOBLEVELING": "Amélioration ennemis",
+      "BESTIARY": "Amélioration ennemis",
       "ANIMALS": "Animaux & Insectes",
       "ROBOTS": "Robots",
       "SYNTHS": "Synthétiques",
@@ -130,13 +130,15 @@
     "RARE": "Rares",
     "TORSO": "sur Torse"
   },
-  "MOBLEVELING": {
+  "BESTIARY": {
     "CREATURE": "Créature",
     "CHARACTER": "Personnage",
     "CURRENTLEVEL": "Niveau (base)",
     "BONUSLEVEL": "Niveau(x) bonus",
     "BODY": "Corps",
+    "SPIRIT": "Esprit",
     "HP": "Points de vie",
+    "HP-short": "PV",
     "INITIATIVE": "Initiative",
     "MIND": "Esprit",
     "NORMAL": "Normal",
@@ -163,6 +165,18 @@
     "TAGSKILLS": "Atouts",
     "ATTRIBUTEPOINTS": "Points S.P.E.C.I.A.L",
     "MAINSTATS": "Statistiques principales",
-    "BONUSES": "Autres bonus"
+    "BONUSES": "Autres bonus",
+    "MELEE": "CaC",
+    "RANGE": "CaC",
+    "OTHER": "Autre",
+    "DEFENSE": "Défense",
+    "BALLISTICRES": "Rd Bal.",
+    "ENERGYRES": "Rd Energ.",
+    "RADIATIONRES": "Rd Rad.",
+    "POISONRES": "Rd Pois.",
+    "ATTACKS": "Attaques",
+    "SKILLS": "Compétences",
+    "EFFECTS": "Capacités spéciales",
+    "INVENTORY": "Inventaire"
   }
 }

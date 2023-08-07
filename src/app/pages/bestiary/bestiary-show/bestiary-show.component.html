@@ -4,13 +4,87 @@
       <ion-buttons slot="start">
         <ion-button (click)="back()">{{"APP.BACK" | translate}}</ion-button>
       </ion-buttons>
-      <ion-title>{{mob.name}}</ion-title>
+      <ion-title><h1>{{mob.name}}</h1></ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content class="ion-padding">
-
-    {{mob | json }}
+    <ion-text class="details">
+      Niveau {{mob.level}}, {{mob.keywords}}<br/>
+      Créature {{mob.type}} ({{mob.xp}} PE)
+    </ion-text>
+    <ion-grid>
+      <ion-row *ngIf="mob.typeDef === CREATURE">
+        <ion-col class="header">{{'BESTIARY.BODY' |translate}}</ion-col>
+        <ion-col class="header">{{'BESTIARY.SPIRIT' |translate}}</ion-col>
+        <ion-col class="header" size="auto">&nbsp;</ion-col>
+        <ion-col class="header">{{'BESTIARY.MELEE' |translate}}</ion-col>
+        <ion-col class="header">{{'BESTIARY.RANGE' |translate}}</ion-col>
+        <ion-col class="header">{{'BESTIARY.OTHER' |translate}}</ion-col>
+      </ion-row>
+      <ion-row *ngIf="mob.typeDef === CREATURE">
+        <ion-col>{{mob.body}}</ion-col>
+        <ion-col>{{mob.spirit}}</ion-col>
+        <ion-col size="auto">&nbsp;</ion-col>
+        <ion-col>{{mob.melee}}</ion-col>
+        <ion-col>{{mob.range}}</ion-col>
+        <ion-col>{{mob.other}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="header">{{'BESTIARY.HP-short' |translate}}</ion-col>
+        <ion-col class="header">{{'BESTIARY.INITIATIVE' |translate}}</ion-col>
+        <ion-col class="header">{{'BESTIARY.DEFENSE' |translate}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>{{mob.health}}</ion-col>
+        <ion-col>{{mob.initiative}}</ion-col>
+        <ion-col>{{mob.defense}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="header">{{'BESTIARY.BALLISTICRES' |translate}}Rd Bal.</ion-col>
+        <ion-col class="header">{{'BESTIARY.ENERGYRES' |translate}}Rd En.</ion-col>
+        <ion-col class="header">{{'BESTIARY.RADIATIONRES' |translate}}Rd Ra.</ion-col>
+        <ion-col class="header">{{'BESTIARY.POISONRES' |translate}}Rd Po.</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>{{mob.ballisticR}}.</ion-col>
+        <ion-col>{{mob.energyR}}</ion-col>
+        <ion-col>{{mob.radiationR}}</ion-col>
+        <ion-col>{{mob.poisonR}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="header">{{'BESTIARY.ATTACKS' |translate}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ul>
+            <li *ngFor="let attack of mob.attacks">
+              <app-rich-text-display [propertyText]="attack"></app-rich-text-display>
+            </li>
+          </ul>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="header">{{'BESTIARY.EFFECTS' |translate}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ul>
+            <li *ngFor="let effect of mob.effects">
+              <app-rich-text-display [propertyText]="effect"></app-rich-text-display>
+            </li>
+          </ul>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="header">{{'BESTIARY.INVENTORY' |translate}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <app-rich-text-display [propertyText]="mob.inventory"></app-rich-text-display>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-content>
 </ion-app>
 

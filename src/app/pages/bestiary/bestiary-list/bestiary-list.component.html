@@ -9,7 +9,7 @@
   </ion-header>
 
   <ion-content class="ion-padding">
-    <ion-searchbar #searchBar [placeholder]="'QUICKSEARCH.PLACEHOLDER' | translate" show-clear-button="focus"
+    <ion-searchbar [placeholder]="'QUICKSEARCH.PLACEHOLDER' | translate" show-clear-button="focus"
                    debounce="200" (ionInput)="filterBestiary($event)"></ion-searchbar>
     <ion-list>
       <ion-item *ngFor="let mob of filteredBestiary" (click)="showDetails(mob)">
