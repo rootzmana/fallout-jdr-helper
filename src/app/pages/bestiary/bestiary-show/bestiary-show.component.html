@@ -9,10 +9,24 @@
   </ion-header>
 
   <ion-content class="ion-padding">
-    <ion-text class="details">
-      Niveau {{mob.level}}, {{mob.keywords}}<br/>
-      Créature {{mob.type}} ({{mob.xp}} PE)
-    </ion-text>
+    <ion-item>
+      <ion-text>
+        <span class="details"> Niveau {{mob.level}}, {{mob.keywords}}</span>&nbsp;
+        <ion-badge *ngIf="mob.extended">{{'BESTIARY.EXTENDED' | translate }}</ion-badge>
+      </ion-text>
+      <ion-note *ngIf="mob.extended"> {{'BESTIARY.EXTENDED-NOTE' | translate }} <a
+        href="https://fallout-jdr.fr/regles_alternatives_fallout.php" target="_blank">Ludi Tery</a></ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-text>
+        <span class="details">Créature {{mob.type}} ({{mob.xp}} PE)</span>
+      </ion-text>
+    </ion-item>
+    <ion-img class="bestiary"
+             [src]="'assets/bestiary/' + mob.name + '.png'"
+             [alt]="mob.name"
+    ></ion-img>
+
     <ion-grid>
       <ion-row *ngIf="mob.typeDef === CREATURE">
         <ion-col class="header">{{'BESTIARY.BODY' |translate}}</ion-col>

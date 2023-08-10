@@ -1,4 +1,4 @@
-export interface Creature {
+export interface MobDetails {
   typeDef: BestiaryType;
   name: string;
   level: string;
@@ -29,12 +29,14 @@ export interface Creature {
   attacks: string[];
   effects: string[];
   inventory: string;
+  extended?: boolean;
 }
 
 export enum BestiaryType {
-  CHARACTER, CREATURE
+  CHARACTER, // Using SPECIAL attributes
+  CREATURE // Using Body & Spirit attributes
 }
 
 export enum SubType {
-  ANIMALS, ROBOTS, SYNTHS, HUMANOIDS, SUPERMUTANTS, TURRETS, BOS, RAIDERS, OTHERS
+  CREATURES, THINKERS, ROBOTS,
 }

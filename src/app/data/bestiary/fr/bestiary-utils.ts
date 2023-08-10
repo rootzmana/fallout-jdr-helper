@@ -1,11 +1,21 @@
-import {Creature, SubType} from "./bestiary.model";
-import {ANIMALS} from "./animals";
+import {MobDetails, SubType} from "./bestiary.model";
+import {CREATURES} from "./CREATURES";
 
-export const getBestiaryList = (subType: SubType): Creature[] => {
+export const getBestiaryList = (subType: SubType): MobDetails[] => {
+  let bestiary = [];
   switch (subType) {
-    case SubType.ANIMALS:
-      return ANIMALS;
+    case SubType.CREATURES:
+      bestiary = CREATURES;
+      break;
+    case SubType.ROBOTS:
+      bestiary = [];
+      break;
+    case SubType.THINKERS:
+      bestiary = [];
+      break;
     default:
-      return []
+      bestiary = [];
+      break;
   }
+  return bestiary.sort((a, b) => a.name.localeCompare(b.name));
 }

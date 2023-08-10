@@ -15,7 +15,12 @@ ion-col.header {
   color: #fff;
 }
 
-.details {
+span.details {
   font-weight: bold;
   text-align: center;
+}
+
+ion-img.bestiary {
+  width: 250px;
+  height: auto;
 }

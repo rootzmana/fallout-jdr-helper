@@ -18,16 +18,8 @@
       "ANDROIDVERSION": "Version Android",
       "DISEASES": "Maladies",
       "MERCHANT": "Marchand Automatique",
-      "BESTIARY": "Amélioration ennemis",
-      "ANIMALS": "Animaux & Insectes",
-      "ROBOTS": "Robots",
-      "SYNTHS": "Synthétiques",
-      "HUMANOIDS": "Humanoides mutants",
-      "SUPERMUTANTS": "Super-mutants",
-      "TURRETS": "Tourelles",
-      "BOS": "Confrérie de l'acier",
-      "RAIDERS": "Pillards",
-      "OTHERS": "Habitants des terres désolées"
+      "BESTIARYUPGRADE": "Amélioration ennemis",
+      "BESTIARYLIST": "Bestiaire complet"
     }
   },
   "HOME": {
@@ -177,6 +169,11 @@
     "ATTACKS": "Attaques",
     "SKILLS": "Compétences",
     "EFFECTS": "Capacités spéciales",
-    "INVENTORY": "Inventaire"
+    "INVENTORY": "Inventaire",
+    "CREATURES": "Créatures",
+    "ROBOTS": "Robots",
+    "THINKERS": "Pensants",
+    "EXTENDED": "Étendu",
+    "EXTENDED-NOTE": "Issu du bestiaire étendu (non officiel) par "
   }
 }
