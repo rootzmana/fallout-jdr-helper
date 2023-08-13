@@ -4,7 +4,7 @@
       <ion-buttons slot="start">
         <ion-button (click)="back()">{{"APP.BACK" | translate}}</ion-button>
       </ion-buttons>
-      <ion-title><h1>{{mob.name}}</h1></ion-title>
+      <ion-title class="ion-text-capitalize">{{mob.name}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -12,9 +12,10 @@
     <ion-item>
       <ion-text>
         <span class="details"> Niveau {{mob.level}}, {{mob.keywords}}</span>&nbsp;
-        <ion-badge *ngIf="mob.extended">{{'BESTIARY.EXTENDED' | translate }}</ion-badge>
+        <ion-badge *ngIf="mob.source === '$OFF$'">{{'BESTIARY.SOURCE.OFF' | translate }}</ion-badge>
+        <ion-badge color="secondary" *ngIf="mob.source === '$EXT$'">{{'BESTIARY.SOURCE.EXT' | translate }}</ion-badge>
       </ion-text>
-      <ion-note *ngIf="mob.extended"> {{'BESTIARY.EXTENDED-NOTE' | translate }} <a
+      <ion-note *ngIf="mob.source === '$EXT$'"> {{'BESTIARY.SOURCE.EXTENDED-NOTE' | translate }} <a
         href="https://fallout-jdr.fr/regles_alternatives_fallout.php" target="_blank">Ludi Tery</a></ion-note>
     </ion-item>
     <ion-item>
@@ -22,11 +23,7 @@
         <span class="details">Créature {{mob.type}} ({{mob.xp}} PE)</span>
       </ion-text>
     </ion-item>
-    <ion-img class="bestiary"
-             [src]="'assets/bestiary/' + mob.name + '.png'"
-             [alt]="mob.name"
-    ></ion-img>
-
+    <ion-img class="bestiary" [src]="'assets/bestiary/' + mob.name + '.png'" [alt]="mob.name"></ion-img>
     <ion-grid>
       <ion-row *ngIf="mob.typeDef === CREATURE">
         <ion-col class="header">{{'BESTIARY.BODY' |translate}}</ion-col>
@@ -70,10 +67,11 @@
         <ion-col class="header">{{'BESTIARY.ATTACKS' |translate}}</ion-col>
       </ion-row>
       <ion-row>
-        <ion-col>
+        <ion-col class="details-list ion-justify-content-start">
           <ul>
             <li *ngFor="let attack of mob.attacks">
-              <app-rich-text-display [propertyText]="attack"></app-rich-text-display>
+              <strong>{{attack.title}}</strong> :
+              <app-rich-text-display [propertyText]="attack.description"></app-rich-text-display>
             </li>
           </ul>
         </ion-col>
@@ -82,10 +80,11 @@
         <ion-col class="header">{{'BESTIARY.EFFECTS' |translate}}</ion-col>
       </ion-row>
       <ion-row>
-        <ion-col>
+        <ion-col class="details-list ion-justify-content-start">
           <ul>
             <li *ngFor="let effect of mob.effects">
-              <app-rich-text-display [propertyText]="effect"></app-rich-text-display>
+              <strong>{{effect.title}}</strong> :
+              <app-rich-text-display [propertyText]="effect.description"></app-rich-text-display>
             </li>
           </ul>
         </ion-col>
@@ -94,8 +93,15 @@
         <ion-col class="header">{{'BESTIARY.INVENTORY' |translate}}</ion-col>
       </ion-row>
       <ion-row>
-        <ion-col>
-          <app-rich-text-display [propertyText]="mob.inventory"></app-rich-text-display>
+        <ion-col class="details-list ion-justify-content-start">
+          <ul>
+            <li *ngFor="let inventory of mob.inventory">
+              <strong>
+                <app-rich-text-display [propertyText]="inventory.title"></app-rich-text-display>
+              </strong> :
+              <app-rich-text-display [propertyText]="inventory.description"></app-rich-text-display>
+            </li>
+          </ul>
         </ion-col>
       </ion-row>
     </ion-grid>

@@ -173,7 +173,12 @@
     "CREATURES": "Créatures",
     "ROBOTS": "Robots",
     "THINKERS": "Pensants",
-    "EXTENDED": "Étendu",
-    "EXTENDED-NOTE": "Issu du bestiaire étendu (non officiel) par "
+    "DISPLAYEXTENDED": "Bestiaire étendu",
+    "SOURCE": {
+      "OFF": "Officiel",
+      "EXT": "Etendu",
+      "EXTENDED-NOTE": "Issu du bestiaire étendu (non officiel) par ",
+      "EXTENDED-NOTE-FULL": "Issu du bestiaire étendu (non officiel) par Ludi Tery"
+    }
   }
 }

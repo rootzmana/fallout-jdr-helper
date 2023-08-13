@@ -26,10 +26,10 @@ export interface MobDetails {
   energyR: string;
   radiationR: string;
   poisonR: string;
-  attacks: string[];
-  effects: string[];
-  inventory: string;
-  extended?: boolean;
+  attacks: ElementKey[];
+  effects: ElementKey[];
+  inventory: ElementKey[];
+  source: string;
 }
 
 export enum BestiaryType {
@@ -39,4 +39,9 @@ export enum BestiaryType {
 
 export enum SubType {
   CREATURES, THINKERS, ROBOTS,
+}
+
+export interface ElementKey {
+  title: string;
+  description: string;
 }

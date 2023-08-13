@@ -16,11 +16,14 @@ export class BestiaryListComponent implements OnInit {
 
   subTypes = [SubType[SubType.CREATURES], SubType[SubType.ROBOTS], SubType[SubType.THINKERS]];
 
+  displayExtended = false;
+  searchText = '';
+
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit() {
-    this.reloadBestiary();
+    this.filterBestiary(null);
   }
 
   showDetails(mob: MobDetails) {
@@ -28,14 +31,27 @@ export class BestiaryListComponent implements OnInit {
   }
 
   filterBestiary(event: any) {
-    const searchText = event.target.value;
-    if (searchText.length > 0) {
-      this.filteredCreatures = getBestiaryList(SubType.CREATURES).filter(value => value.name.toLowerCase().includes(searchText.toLowerCase()));
-      this.filteredThinkers = getBestiaryList(SubType.THINKERS).filter(value => value.name.toLowerCase().includes(searchText.toLowerCase()));
-      this.filteredRobots = getBestiaryList(SubType.ROBOTS).filter(value => value.name.toLowerCase().includes(searchText.toLowerCase()));
-    } else {
-      this.reloadBestiary();
-    }
+    this.searchText = (event && event.target) ? event.target.value : this.searchText;
+    this.filteredCreatures = this.getFilteredMobs(SubType.CREATURES);
+    this.filteredThinkers = this.getFilteredMobs(SubType.THINKERS);
+    this.filteredRobots = this.getFilteredMobs(SubType.ROBOTS);
+  }
+
+  private getFilteredMobs(subType: SubType) {
+    return getBestiaryList(subType)
+      .filter(value => {
+        if (!this.displayExtended) {
+          return value.source === '$OFF$';
+        } else {
+          return true;
+        }
+      })
+      .filter(value => {
+        if (this.searchText.trim() === '') {
+          return true;
+        }
+        return value.name.toLowerCase().includes(this.searchText.toLowerCase())
+      })
   }
 
   getFilteredCreatures(subType: string) {
@@ -51,9 +67,10 @@ export class BestiaryListComponent implements OnInit {
     }
   }
 
-  private reloadBestiary() {
-    this.filteredCreatures = getBestiaryList(SubType.CREATURES);
-    this.filteredThinkers = getBestiaryList(SubType.THINKERS);
-    this.filteredRobots = getBestiaryList(SubType.ROBOTS);
+  protected readonly event = event;
+
+  updateSourceFilter(event: any) {
+    this.displayExtended = event.detail.checked;
+    this.filterBestiary(null);
   }
 }

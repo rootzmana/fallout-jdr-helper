@@ -2,12 +2,15 @@ ion-col {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   border: solid 1px var(--dv-background-accent-dark);
 
   ul > li {
     list-style-type: none
   }
+}
+
+ion-col.detail-list {
+  text-align: left;
 }
 
 ion-col.header {
