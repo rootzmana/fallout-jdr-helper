@@ -31,35 +31,29 @@ jobs:
         ionic build --prod
         npx cap sync
         
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: www
-        path: www
+    #- name: Archive production artifacts
+    #  uses: actions/upload-artifact@v3
+    #  with:
+    #    name: www
+    #    path: www
      
-    #- name: Build Signed APK
-    #  uses: victorbnl/build-signed-apk@main
-    #  with:
-    #    gradlew_file: android/gradlew
-    #    gradlew_dir: android/
-    #    keystore_file: android.jks
-    #    keystore_password: ${{ secrets.KEYSTORE_PASS }}
-    #    key_alias: ${{ secrets.KEY_ALIAS }}
-    #    key_password: ${{ secrets.KEY_PASSWORD }}
-        
-    #- name: Copy file
-    #  uses: canastro/copy-action@0.0.2
-    #  with:
-    #    source: app/build/outputs/apk/release/app-release.apk
-    #    target: www/falloutjdrhelper.apk
-          
-    - name: SFTP Deploy
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.2
+    #- name: SFTP Deploy
+    #  uses: wlixcc/SFTP-Deploy-Action@v1.2.2
+     # with:
+    #    username: kyne
+    #    server: kyne.ovh
+     #   ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+   #     local_path: ./www/*
+    #   remote_path: /home/kyne/fallout-test-www
+
+    - name: SFTP Sync
+      uses: swillner/sftp-sync-action@v1.0
       with:
-        username: kyne
         server: kyne.ovh
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        local_path: ./www/*
-        remote_path: /home/kyne/fallout-test-www
-        
+        user: kyne
+        user_private_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAuY6UsORFI2g3WyigYr8HT37IlAKYH/lFgwp+JKE7Uq ed25519-key-20210313
+        host_public_key: "ssh-rsa ACTUALKEYCONTENTHERE"
+        local: ./www/
+        remote: /home/kyne/fallout-test-www
+        mirror_options: "--exclude-glob=.git*/ --verbose"
         
