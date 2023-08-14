@@ -52,7 +52,7 @@ jobs:
         server: kyne.ovh
         user: kyne
         user_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        host_public_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAuY6UsORFI2g3WyigYr8HT37IlAKYH/lFgwp+JKE7Uq ed25519-key-20210313"
+        host_public_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAuY6UsORFI2g3WyigYr8HT37IlAKYH/lFgwp+JKE7Uq"
         local: ./www/
         remote: /home/kyne/fallout-test-www
         mirror_options: "--exclude-glob=.git*/ --verbose"
