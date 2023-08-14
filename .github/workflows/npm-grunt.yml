@@ -46,14 +46,13 @@ jobs:
    #     local_path: ./www/*
     #   remote_path: /home/kyne/fallout-test-www
 
-    - name: SFTP Sync
-      uses: swillner/sftp-sync-action@v1.0
+    - name: "Deploy"
+      uses: milanmk/actions-file-deployer@master
       with:
-        server: kyne.ovh
-        user: kyne
-        user_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        host_public_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAuY6UsORFI2g3WyigYr8HT37IlAKYH/lFgwp+JKE7Uq"
-        local: ./www/
-        remote: /home/kyne/fallout-test-www
-        mirror_options: "--exclude-glob=.git*/ --verbose"
+          remote-protocol: "sftp"
+          remote-host: "kyne.ovh"
+          remote-user: "kyne"
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local-path: ./www/
+          remote-path: /home/kyne/fallout-test-www
         
