@@ -16,7 +16,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
-
+      with:
+          fetch-depth: 0
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -31,35 +32,28 @@ jobs:
         ionic build --prod
         npx cap sync
         
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: www
-        path: www
+    #- name: Archive production artifacts
+    #  uses: actions/upload-artifact@v3
+    #  with:
+    #    name: www
+    #    path: www
      
-    #- name: Build Signed APK
-    #  uses: victorbnl/build-signed-apk@main
-    #  with:
-    #    gradlew_file: android/gradlew
-    #    gradlew_dir: android/
-    #    keystore_file: android.jks
-    #    keystore_password: ${{ secrets.KEYSTORE_PASS }}
-    #    key_alias: ${{ secrets.KEY_ALIAS }}
-    #    key_password: ${{ secrets.KEY_PASSWORD }}
-        
-    #- name: Copy file
-    #  uses: canastro/copy-action@0.0.2
-    #  with:
-    #    source: app/build/outputs/apk/release/app-release.apk
-    #    target: www/falloutjdrhelper.apk
-          
-    - name: SFTP Deploy
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.2
+    #- name: SFTP Deploy
+    #  uses: wlixcc/SFTP-Deploy-Action@v1.2.2
+     # with:
+    #    username: kyne
+    #    server: kyne.ovh
+     #   ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+   #     local_path: ./www/*
+    #   remote_path: /home/kyne/fallout-test-www
+
+    - name: "Deploy"
+      uses: milanmk/actions-file-deployer@master
       with:
-        username: kyne
-        server: kyne.ovh
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        local_path: ./www/*
-        remote_path: /home/kyne/fallout-test-www
-        
+          remote-protocol: "sftp"
+          remote-host: "kyne.ovh"
+          remote-user: "kyne"
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local-path: ./www/
+          remote-path: /home/kyne/fallout-test-www
         
