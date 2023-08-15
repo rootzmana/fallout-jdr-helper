@@ -38,22 +38,22 @@ jobs:
     #    name: www
     #    path: www
      
-    #- name: SFTP Deploy
-    #  uses: wlixcc/SFTP-Deploy-Action@v1.2.2
-     # with:
-    #    username: kyne
-    #    server: kyne.ovh
-     #   ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-   #     local_path: ./www/*
-    #   remote_path: /home/kyne/fallout-test-www
-
-    - name: "Deploy"
-      uses: milanmk/actions-file-deployer@master
+    - name: SFTP Deploy
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.2
       with:
-          remote-protocol: "sftp"
-          remote-host: "kyne.ovh"
-          remote-user: "kyne"
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local-path: ./www/
-          remote-path: /home/kyne/fallout-test-www
+        username: kyne
+        server: kyne.ovh
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        local_path: ./www/*
+        remote_path: /home/kyne/fallout-test-www
+
+   # - name: "Deploy"
+   #   uses: milanmk/actions-file-deployer@master
+   #   with:
+   #       remote-protocol: "sftp"
+   #       remote-host: "kyne.ovh"
+   #       remote-user: "kyne"
+   #       ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+   #       local-path: ./www/
+   #       remote-path: /home/kyne/fallout-test-www
         
