@@ -20,7 +20,7 @@
     </ion-item>
     <ion-item>
       <ion-text>
-        <span class="details">Créature {{mob.type}} ({{mob.xp}} PE)</span>
+        <span class="details">{{mob.type}} ({{mob.xp}} PE)</span>
       </ion-text>
     </ion-item>
     <ion-img class="bestiary" [src]="'assets/bestiary/' + mob.name + '.png'" [alt]="mob.name"></ion-img>
@@ -52,10 +52,10 @@
         <ion-col>{{mob.defense}}</ion-col>
       </ion-row>
       <ion-row>
-        <ion-col class="header">{{'BESTIARY.BALLISTICRES' |translate}}Rd Bal.</ion-col>
-        <ion-col class="header">{{'BESTIARY.ENERGYRES' |translate}}Rd En.</ion-col>
-        <ion-col class="header">{{'BESTIARY.RADIATIONRES' |translate}}Rd Ra.</ion-col>
-        <ion-col class="header">{{'BESTIARY.POISONRES' |translate}}Rd Po.</ion-col>
+        <ion-col class="header">{{'BESTIARY.BALLISTICRES' |translate}}</ion-col>
+        <ion-col class="header">{{'BESTIARY.ENERGYRES' |translate}}</ion-col>
+        <ion-col class="header">{{'BESTIARY.RADIATIONRES' |translate}}</ion-col>
+        <ion-col class="header">{{'BESTIARY.POISONRES' |translate}}</ion-col>
       </ion-row>
       <ion-row>
         <ion-col>{{mob.ballisticR}}.</ion-col>
