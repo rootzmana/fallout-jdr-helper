@@ -27,7 +27,7 @@ export class BestiaryListComponent implements OnInit {
   }
 
   showDetails(mob: MobDetails) {
-    this.router.navigateByUrl('/bestiary/show/' + mob.name, {state: {mob: mob}});
+    this.router.navigateByUrl('/bestiary/show/' + mob.name);
   }
 
   filterBestiary(event: any) {

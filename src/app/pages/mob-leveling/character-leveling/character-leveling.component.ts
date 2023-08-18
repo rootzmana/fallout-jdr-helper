@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {MobDetails} from "../../../data/bestiary/fr/bestiary.model";
 
 @Component({
   selector: 'app-character-leveling',
@@ -6,6 +7,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./character-leveling.component.scss'],
 })
 export class CharacterLevelingComponent implements OnInit {
+
+  @Input() mob: MobDetails;
+
   mobModifier: 'NORMAL' | 'NOTABLE' | 'MAJOR' = 'NORMAL';
 
   baseLevel: number = null;

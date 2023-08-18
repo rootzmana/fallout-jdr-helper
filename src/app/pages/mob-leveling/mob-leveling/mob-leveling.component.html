@@ -19,8 +19,8 @@
       </ion-segment-button>
     </ion-segment>
 
-    <app-creature-leveling *ngIf="mobType === 'CREATURE'"></app-creature-leveling>
-    <app-character-leveling *ngIf="mobType === 'CHARACTER'"></app-character-leveling>
+    <app-creature-leveling *ngIf="mobType === 'CREATURE'" [mob]="mob"></app-creature-leveling>
+    <app-character-leveling *ngIf="mobType === 'CHARACTER'" [mob]="mob"></app-character-leveling>
 
   </ion-content>
 </ion-app>

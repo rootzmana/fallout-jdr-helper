@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
+import {BestiaryType, MobDetails} from "../../../data/bestiary/fr/bestiary.model";
 
 @Component({
   selector: 'app-mob-leveling',
@@ -7,11 +9,20 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MobLevelingComponent implements OnInit {
   mobType: 'CREATURE' | 'CHARACTER' = 'CREATURE';
+  mob: MobDetails;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
+    this.mob = this.router.getCurrentNavigation().extras?.state?.mob;
+    if (this.mob) {
+      if (this.mob.typeDef === BestiaryType.CHARACTER) {
+        this.mobType = "CHARACTER";
+      } else if (this.mob.typeDef === BestiaryType.CREATURE) {
+        this.mobType = "CREATURE";
+      }
+    }
   }
 
   segmentChanged($event: any) {

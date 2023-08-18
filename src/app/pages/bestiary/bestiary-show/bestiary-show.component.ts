@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {BestiaryType, MobDetails} from "../../../data/bestiary/fr/bestiary.model";
 import {Location} from '@angular/common';
+import {findMobByName} from "../../../data/bestiary/fr/bestiary-utils";
 
 @Component({
   selector: 'app-bestiary-show',
@@ -14,14 +15,21 @@ export class BestiaryShowComponent implements OnInit {
   CREATURE = BestiaryType.CREATURE;
   CHARACTER = BestiaryType.CHARACTER;
 
-  constructor(private router: Router, private location: Location) {
+  constructor(private router: Router, private location: Location, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.mob = this.router.getCurrentNavigation().extras.state.mob;
+    this.activatedRoute.params.subscribe(params => {
+      const mobName = params.name;
+      this.mob = findMobByName(mobName);
+    });
   }
 
   back() {
     this.location.back();
+  }
+
+  upgradeCreature() {
+    this.router.navigateByUrl('/mob-leveling', {state: {mob: this.mob}});
   }
 }
