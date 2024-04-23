@@ -16,15 +16,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      with:
+        with:
           fetch-depth: 0
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
       - name: Install ionic
-      run: npm install -g @ionic/cli
+        run: npm install -g @ionic/cli
 
       - name: Build
         run: |
@@ -33,19 +33,19 @@ jobs:
           npx cap sync
 
       #- name: Archive production artifacts
-    #  uses: actions/upload-artifact@v3
-    #  with:
-    #    name: www
-    #    path: www
+      #  uses: actions/upload-artifact@v3
+      #  with:
+      #    name: www
+      #    path: www
 
       - name: SFTP Deploy
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.2
-      with:
-        username: kyne
-        server: kyne.ovh
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        local_path: ./www/*
-        remote_path: /home/kyne/fallout-test-www
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.2
+        with:
+          username: kyne
+          server: kyne.ovh
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: ./www/*
+          remote_path: /home/kyne/fallout-test-www
 
    # - name: "Deploy"
    #   uses: milanmk/actions-file-deployer@master
