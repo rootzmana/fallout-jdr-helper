@@ -1027,7 +1027,7 @@ export const CREATURES: MobDetails[] = [
         "title": "- Déchiquetage"
       },
       {
-        "description": " si un attaquant choisi dviser le buste de la créature, il ignore la RD de cette dernière. Cette capacité ne s'applique pas si l'attaque touche par hasard le buste.",
+        "description": " si un attaquant choisi de viser le buste de la créature, il ignore la RD de cette dernière. Cette capacité ne s'applique pas si l'attaque touche par hasard le buste.",
         "title": "- Point faible"
       },
       {
@@ -1106,7 +1106,7 @@ export const CREATURES: MobDetails[] = [
         "title": "- Déchiquetage"
       },
       {
-        "description": " si un attaquant choisi dviser le buste de la créature, il ignore la RD de cette dernière. Cette capacité ne s'applique pas si l'attaque touche par hasard le buste.",
+        "description": " si un attaquant choisi de viser le buste de la créature, il ignore la RD de cette dernière. Cette capacité ne s'applique pas si l'attaque touche par hasard le buste.",
         "title": "- Point faible"
       },
       {
@@ -1185,7 +1185,7 @@ export const CREATURES: MobDetails[] = [
         "title": "- Déchiquetage"
       },
       {
-        "description": " si un attaquant choisi dviser le buste de la créature, il ignore la RD de cette dernière. Cette capacité ne s'applique pas si l'attaque touche par hasard le buste.",
+        "description": " si un attaquant choisi de viser le buste de la créature, il ignore la RD de cette dernière. Cette capacité ne s'applique pas si l'attaque touche par hasard le buste.",
         "title": "- Point faible"
       },
       {
@@ -1268,7 +1268,7 @@ export const CREATURES: MobDetails[] = [
         "title": "- Déchiquetage"
       },
       {
-        "description": " si un attaquant choisi dviser le buste de la créature, il ignore la RD de cette dernière. Cette capacité ne s'applique pas si l'attaque touche par hasard le buste.",
+        "description": " si un attaquant choisi de viser le buste de la créature, il ignore la RD de cette dernière. Cette capacité ne s'applique pas si l'attaque touche par hasard le buste.",
         "title": "- Point faible"
       },
       {

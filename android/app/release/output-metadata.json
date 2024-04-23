@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "org.kyne.falloutjdrhelper",
+  "applicationId": "org.kyne.jdrhelper",
   "variantName": "release",
   "elements": [
     {

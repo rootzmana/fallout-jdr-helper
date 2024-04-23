@@ -1,6 +1,6 @@
 {
   "APP": {
-    "TITLE": "2D20 Helper for Fallout",
+    "TITLE": "Kyne 2D20 Helper",
     "SUBTITLE": " Outils et aides",
     "SECTIONS": {
       "MAIN": "Aides de jeu",
@@ -23,7 +23,7 @@
     }
   },
   "HOME": {
-    "WELCOME": "Bienvenue sur l'utilitaire de Fallout 2d20",
+    "WELCOME": "Bienvenue sur l'utilitaire de Kyne 2d20",
     "WELCOME-DETAILS": "Utilisez le menu de gauche pour accéder aux fonctionnalités, ou cherchez directement un objet via le bouton !"
   },
   "MODDISPLAY": {
