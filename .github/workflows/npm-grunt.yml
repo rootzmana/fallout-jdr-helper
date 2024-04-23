@@ -45,7 +45,7 @@ jobs:
           server: kyne.ovh
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           local_path: ./www/*
-          remote_path: /home/kyne/fallout-test-www
+          remote_path: /home/kyne/fallout-www
 
    # - name: "Deploy"
    #   uses: milanmk/actions-file-deployer@master
@@ -55,5 +55,5 @@ jobs:
    #       remote-user: "kyne"
    #       ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
    #       local-path: ./www/
-   #       remote-path: /home/kyne/fallout-test-www
+    #       remote-path: /home/kyne/fallout-www
 
