@@ -2,9 +2,9 @@ name: NodeJS
 
 on:
   push:
-    branches: [ "bestiary" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "bestiary" ]
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -13,32 +13,32 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-    
+
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       with:
           fetch-depth: 0
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        
-    - name: Install ionic
+
+      - name: Install ionic
       run: npm install -g @ionic/cli
 
-    - name: Build     
-      run: |
-        npm install
-        ionic build --prod
-        npx cap sync
-        
-    #- name: Archive production artifacts
+      - name: Build
+        run: |
+          npm install
+          ionic build --prod
+          npx cap sync
+
+      #- name: Archive production artifacts
     #  uses: actions/upload-artifact@v3
     #  with:
     #    name: www
     #    path: www
-     
-    - name: SFTP Deploy
+
+      - name: SFTP Deploy
       uses: wlixcc/SFTP-Deploy-Action@v1.2.2
       with:
         username: kyne
@@ -56,4 +56,4 @@ jobs:
    #       ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
    #       local-path: ./www/
    #       remote-path: /home/kyne/fallout-test-www
-        
+
