@@ -1,9 +1,10 @@
 {
   "APP": {
-    "TITLE": "2D20 Helper for Fallout",
+    "TITLE": "Kyne 2D20 Helper",
     "SUBTITLE": " Outils et aides",
     "SECTIONS": {
-      "MAIN": "Aides de jeu"
+      "MAIN": "Aides de jeu",
+      "BESTIARY": "Bestiaire"
     },
     "BACK": "Retour",
     "LANGUAGEPICKER": "Choix de la langue",
@@ -17,11 +18,12 @@
       "ANDROIDVERSION": "Version Android",
       "DISEASES": "Maladies",
       "MERCHANT": "Marchand Automatique",
-      "MOBLEVELING": "Amélioration ennemis"
+      "BESTIARYUPGRADE": "Amélioration ennemis",
+      "BESTIARYLIST": "Bestiaire complet"
     }
   },
   "HOME": {
-    "WELCOME": "Bienvenue sur l'utilitaire de Fallout 2d20",
+    "WELCOME": "Bienvenue sur l'utilitaire de Kyne 2d20",
     "WELCOME-DETAILS": "Utilisez le menu de gauche pour accéder aux fonctionnalités, ou cherchez directement un objet via le bouton !"
   },
   "MODDISPLAY": {
@@ -120,13 +122,15 @@
     "RARE": "Rares",
     "TORSO": "sur Torse"
   },
-  "MOBLEVELING": {
+  "BESTIARY": {
     "CREATURE": "Créature",
     "CHARACTER": "Personnage",
     "CURRENTLEVEL": "Niveau (base)",
     "BONUSLEVEL": "Niveau(x) bonus",
     "BODY": "Corps",
+    "SPIRIT": "Esprit",
     "HP": "Points de vie",
+    "HP-short": "PV",
     "INITIATIVE": "Initiative",
     "MIND": "Esprit",
     "NORMAL": "Normal",
@@ -153,6 +157,28 @@
     "TAGSKILLS": "Atouts",
     "ATTRIBUTEPOINTS": "Points S.P.E.C.I.A.L",
     "MAINSTATS": "Statistiques principales",
-    "BONUSES": "Autres bonus"
+    "BONUSES": "Autres bonus",
+    "MELEE": "CaC",
+    "RANGE": "Distance",
+    "OTHER": "Autre",
+    "DEFENSE": "Défense",
+    "BALLISTICRES": "Rd Bal.",
+    "ENERGYRES": "Rd Energ.",
+    "RADIATIONRES": "Rd Rad.",
+    "POISONRES": "Rd Pois.",
+    "ATTACKS": "Attaques",
+    "SKILLS": "Compétences",
+    "EFFECTS": "Capacités spéciales",
+    "INVENTORY": "Inventaire",
+    "CREATURES": "Créatures",
+    "ROBOTS": "Robots",
+    "THINKERS": "Pensants",
+    "DISPLAYEXTENDED": "Bestiaire étendu",
+    "SOURCE": {
+      "OFF": "Officiel",
+      "EXT": "Etendu",
+      "EXTENDED-NOTE": "Issu du bestiaire étendu (non officiel) par ",
+      "EXTENDED-NOTE-FULL": "Issu du bestiaire étendu (non officiel) par Ludi Tery"
+    }
   }
 }

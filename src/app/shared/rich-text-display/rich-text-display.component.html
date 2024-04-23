@@ -2,5 +2,9 @@
   <ng-container *ngIf="word === '$CD$'">
     <img alt="CombatDice" class="clickable-icon" (click)="openCombatDiceModal()" src="assets/fallout-dice/side6.png"/>&nbsp;
   </ng-container>
-  <ng-container *ngIf="word !== '$CD$'">{{word + ' '}}</ng-container>
+  <ng-container *ngIf="word === '$EXT$'">
+    <ion-badge color="secondary"
+               [title]="'BESTIARY.SOURCE.EXTENDED-NOTE-FULL' | translate">{{'BESTIARY.SOURCE.EXT' | translate }}</ion-badge>
+  </ng-container>
+  <ng-container *ngIf="word !== '$CD$' && word !== '$EXT$'">{{word + ' '}}</ng-container>
 </ng-container>

@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {MobDetails} from "../../../data/bestiary/fr/bestiary.model";
 
 @Component({
   selector: 'app-creature-leveling',
@@ -6,6 +7,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./creature-leveling.component.scss'],
 })
 export class CreatureLevelingComponent implements OnInit {
+
+  @Input() mob: MobDetails;
+
   mobModifier: 'NORMAL' | 'MIGHTY' | 'LEGENDARY' = 'NORMAL';
 
   baseLevel: number = null;
@@ -18,12 +22,24 @@ export class CreatureLevelingComponent implements OnInit {
   upgradeMind: number = 0;
   damageBonus: number = 0;
   armorBonus: number = 0;
-  statsBonus: number = 0;
 
   constructor() {
   }
 
   ngOnInit() {
+    if (this.mob) {
+      if (this.mob.type.includes("Normale")) {
+        this.mobModifier = "NORMAL";
+      } else if (this.mob.type.includes("Puissant")) {
+        this.mobModifier = "MIGHTY"
+      } else if (this.mob.type.includes("Légendaire")) {
+        this.mobModifier = "LEGENDARY";
+      }
+      this.body = Number(this.mob.body);
+      this.mind = Number(this.mob.spirit);
+      this.baseLevel = Number(this.mob.level);
+      this.bonusLevel = 0;
+    }
   }
 
   upgradeCreature() {

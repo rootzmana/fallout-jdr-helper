@@ -68,7 +68,13 @@ export class AppComponent implements OnInit {
         this.buildMenu('AUTOLOOT', 'auto-loot', 'bag-handle'),
         this.buildMenu('MERCHANT', 'merchant', 'cash'),
         this.buildMenu('DISEASES', 'diseases', 'medical'),
-        this.buildMenu('MOBLEVELING', 'mob-leveling', 'ribbon')
+      ]
+    });
+    this.sections.push({
+      label: this.translate.instant('APP.SECTIONS.BESTIARY'),
+      data: [
+        this.buildMenu('BESTIARYUPGRADE', 'mob-leveling', 'ribbon'),
+        this.buildMenu('BESTIARYLIST', 'bestiary', 'paw'),
       ]
     });
     this.sections = [...this.sections, ...REGISTERED_DATA_SECTIONS[this.currentLanguage]];

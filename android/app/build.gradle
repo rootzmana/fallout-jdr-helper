@@ -9,7 +9,7 @@ android {
   }
   compileSdkVersion rootProject.ext.compileSdkVersion
   defaultConfig {
-    applicationId "org.kyne.falloutjdrhelper"
+    applicationId "org.kyne.jdrhelper"
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
     versionCode 14

@@ -1,0 +1,36 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-toggle [checked]="displayExtended"
+                    (ionChange)="updateSourceFilter($event)">{{'BESTIARY.DISPLAYEXTENDED' | translate}}</ion-toggle>
+      </ion-buttons>
+      <ion-title class="ion-text-capitalize">{{"APP.MENU.BESTIARYLIST" | translate}}</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-searchbar [placeholder]="'QUICKSEARCH.PLACEHOLDER' | translate" show-clear-button="focus"
+                     debounce="200" (ionInput)="filterBestiary($event)"></ion-searchbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-item-group *ngFor="let subType of subTypes">
+      <ion-item-divider color="primary">
+        <ion-label><h2>{{'BESTIARY.' + subType | translate }}</h2></ion-label>
+      </ion-item-divider>
+
+      <ion-item *ngFor="let mob of getFilteredCreatures(subType)" (click)="showDetails(mob)">
+        <ion-avatar slot="start">
+          <img [alt]="mob.name" [src]="'assets/bestiary/' + mob.name + '.png'"/>
+        </ion-avatar>
+        <ion-label>{{mob.name}}</ion-label>
+        <ion-badge *ngIf="mob.source === '$OFF$'">{{'BESTIARY.SOURCE.OFF' | translate }}</ion-badge>
+        <ion-badge color="secondary" *ngIf="mob.source === '$EXT$'">{{'BESTIARY.SOURCE.EXT' | translate }}</ion-badge>
+      </ion-item>
+    </ion-item-group>
+
+  </ion-content>
+</ion-app>

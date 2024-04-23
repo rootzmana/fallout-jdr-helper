@@ -1,4 +1,4 @@
-# 2d20 Helper for Fallout
+# Kyne 2d20 Helper
 
 ## Utilisation (FR)
 

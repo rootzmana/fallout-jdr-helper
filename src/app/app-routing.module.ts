@@ -46,6 +46,10 @@ const routes: Routes = [
   {
     path: 'mob-leveling',
     loadChildren: () => import('./pages/mob-leveling/mob-leveling.module').then(m => m.MobLevelingModule)
+  },
+  {
+    path: 'bestiary',
+    loadChildren: () => import('./pages/bestiary/bestiary.module').then(m => m.BestiaryModule)
   }
 ];
 
