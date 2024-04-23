@@ -1,6 +1,6 @@
 {
   "name": "fallout-jdr-tools",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "KyneSilverhide",
   "homepage": "https://kyne.ovh",
   "scripts": {
@@ -32,7 +32,7 @@
     "@johnbraum/capacitor-qrscanner": "^1.1.13",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
-    "angularx-qrcode": "^14.0.0",
+    "angularx-qrcode": "^15.0.0",
     "dice-typescript": "^1.6.1",
     "lzutf8": "^0.6.3",
     "rxjs": "^7.8.0",
