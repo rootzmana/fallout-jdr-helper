@@ -10,6 +10,13 @@ import {getBestiaryList} from "../../../data/bestiary/fr/bestiary-utils";
 })
 export class BestiaryListComponent implements OnInit {
 
+  public disclaimerButtons = [
+    {
+      text: 'J\'ai compris',
+      role: 'cancel',
+    },
+  ];
+
   filteredCreatures: MobDetails[] = [];
   filteredThinkers: MobDetails[] = [];
   filteredRobots: MobDetails[] = [];

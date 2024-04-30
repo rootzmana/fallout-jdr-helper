@@ -127,6 +127,7 @@
     "CHARACTER": "Personnage",
     "CURRENTLEVEL": "Niveau (base)",
     "BONUSLEVEL": "Niveau(x) bonus",
+    "DISCLAIMER": "Attention, le contenu de cette section est réservé aux MJs. Si vous êtes un joueur, merci de ne pas accéder au détail du bestiaire",
     "BODY": "Corps",
     "SPIRIT": "Esprit",
     "HP": "Points de vie",

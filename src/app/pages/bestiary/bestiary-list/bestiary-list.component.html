@@ -32,5 +32,13 @@
       </ion-item>
     </ion-item-group>
 
+    <ion-toast
+      [message]="'BESTIARY.DISCLAIMER' | translate"
+      swipeGesture="vertical"
+      position="top"
+      is-open="true"
+      [buttons]="disclaimerButtons"
+    ></ion-toast>
+
   </ion-content>
 </ion-app>
