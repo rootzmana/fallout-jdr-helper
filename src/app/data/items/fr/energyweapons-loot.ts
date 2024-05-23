@@ -103,7 +103,7 @@ export const ENERGYWEAPONS_LOOT_DATA_FR = [
     Weight: '1,5',
     Cost: 156,
     Rarity: 5,
-    Munitions: 'Cartouches au plasma',
+    Munitions: 'Cartouche Gamma',
     id: 'e-5'
   }
 ]
