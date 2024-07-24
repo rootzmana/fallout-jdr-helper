@@ -176,7 +176,7 @@ export const RECIPE_CHEMISTRY_STATION_FR = [
     "Rarity": "Fréquente"
   },
   {
-    "Name": "Stimpak Dilué",
+    "Name": "Stimpak (Dilué)",
     "Components": "Stimpak x1, Eau purifiée x1",
     "Complexity": 2,
     "Perk": "–",
