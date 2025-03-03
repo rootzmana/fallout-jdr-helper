@@ -47,8 +47,10 @@
         <ion-input type="number" (ionInput)="search()" [(ngModel)]="level" min="1"></ion-input>
       </ion-col>
       <ion-col>
-        <ion-checkbox type="checkbox" aria-label='MIND' name="mind"
-                      label-placement="stacked" alignment="center" fill="outline" [(ngModel)]="isRobot">Robot
+        <ion-checkbox type="checkbox" aria-label='MIND' name="mind" 
+                      label-placement="stacked" alignment="center" 
+                      fill="outline" (ionChange)="search()" [(ngModel)]="isRobot">
+          Robot
         </ion-checkbox>
       </ion-col>
     </ion-row>
@@ -70,7 +72,7 @@
           {{ perk.a == 0 ? "" : ("PERKS.AGILITY" | translate) + " " + perk.a }}
           {{ perk.l == 0 ? "" : ("PERKS.LUCK" | translate) + " " + perk.l }}
           {{ perk.level == 0 ? "" : ("PERKS.LEVEL" | translate) + " " + perk.level + "+" }}
-          {{ perk.canRobot == false ? "" : ("PERKS.CANTROBOT" | translate)}}<br/>
+          {{ perk.canRobot ? "" : ("PERKS.CANTROBOT" | translate)}}<br/>
           <strong>Description</strong> :
           <app-rich-text-display [propertyText]="perk.description"></app-rich-text-display>
           <br/>

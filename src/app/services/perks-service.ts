@@ -26,20 +26,23 @@ export class PerksService {
     const result: PerkDetail[] = [];
     for(let perk of PERKS){
       const perkOwnedCount = stats.ownedPerks.get(perk)??0;
-      const perkLevelCap = perk.level + perk.rankThreshold*(perkOwnedCount);
+      const perkLevelCap = perk.level + perk.rankThreshold * (perkOwnedCount);
+      const checkRobot = !stats.isRobot || perk.canRobot
+      
 
-      if(!perk.canRobot && stats.isRobot) continue;
-      if(stats.s >= perk.s
-      && stats.p >= perk.p
-      && stats.e >= perk.e
-      && stats.c >= perk.c
-      && stats.i >= perk.i
-      && stats.a >= perk.a
-      && stats.l >= perk.l
-      && perkOwnedCount < perk.ranks
-      && stats.level >= perkLevelCap){
+      if (stats.s >= perk.s
+        && stats.p >= perk.p
+        && stats.e >= perk.e
+        && stats.c >= perk.c
+        && stats.i >= perk.i
+        && stats.a >= perk.a
+        && stats.l >= perk.l
+        && perkOwnedCount < perk.ranks
+        && stats.level >= perkLevelCap
+        && checkRobot) {
         result.push(perk);
       }
+      
     }
 
     return result;
