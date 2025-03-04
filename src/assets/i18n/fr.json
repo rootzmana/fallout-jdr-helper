@@ -15,7 +15,7 @@
       "RANDOMBOOKS": "Livres Aléatoires",
       "RANDOMLOOT": "Loots Aléatoires",
       "AUTOLOOT": "Loot Automatique",
-      "PERKS": "Compétences et Aptitudes",
+      "PERKS": "Gestion des Perks",
       "ANDROIDVERSION": "Version Android",
       "DISEASES": "Maladies",
       "MERCHANT": "Marchand Automatique",
@@ -124,7 +124,7 @@
     "TORSO": "sur Torse"
   },
   "PERKS": {
-    "INFO": "Renseigner les stats pour voir les compétences accéssibles",
+    "INFO": "Renseigner les stats pour voir les compétences accessibles",
     "SEARCH": "Rechercher",
     "FILTER": "Filtrer les résultats...",
     "STRENGTH": "Force",
@@ -135,7 +135,8 @@
     "AGILITY": "Agilité",
     "LUCK": "Chance",
     "LEVEL": "Niveau",
-    "CANTROBOT": "Inaccessible au robot"
+    "CANTROBOT": "Inaccessible au robot",
+    "RANKTRESHOLD": " par rang"
   },
   "BESTIARY": {
     "CREATURE": "Créature",

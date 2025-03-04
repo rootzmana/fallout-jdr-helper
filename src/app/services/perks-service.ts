@@ -13,7 +13,6 @@ export interface Stats {
   a:number;
   l:number;
   isRobot:boolean;
-  ownedPerks:Map<PerkDetail,number>;
 }
 
 @Injectable({providedIn: 'root'})
@@ -25,8 +24,6 @@ export class PerksService {
   findByCharacterStats(stats: Stats) : PerkDetail[]{
     const result: PerkDetail[] = [];
     for(let perk of PERKS){
-      const perkOwnedCount = stats.ownedPerks.get(perk)??0;
-      const perkLevelCap = perk.level + perk.rankThreshold * (perkOwnedCount);
       const checkRobot = !stats.isRobot || perk.canRobot
       
 
@@ -37,8 +34,7 @@ export class PerksService {
         && stats.i >= perk.i
         && stats.a >= perk.a
         && stats.l >= perk.l
-        && perkOwnedCount < perk.ranks
-        && stats.level >= perkLevelCap
+        && stats.level >= perk.level
         && checkRobot) {
         result.push(perk);
       }

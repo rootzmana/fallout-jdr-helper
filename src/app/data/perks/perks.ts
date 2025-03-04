@@ -3,7 +3,7 @@ import {PerkDetail} from "./perks.model";
 export const PERKS:PerkDetail[] = [
   {
     "name": "AMI DES ANIMAUX",
-    "description": "Au rang 1, chaque fois qu’un PNJ créature dont le profil affiche le mot-clef Mammifère, Lézard ou Insecte souhaite vous attaquer, jetez 1 $CD$ : si vous obtenez un résultat autre qu’un Effet, la créature choisit de ne pas vous attaquer, bien qu’elle puisse toujours s’en prendre à un autre personnage. Au rang 2, vous pouvez entreprendre un test de CHR + Survie de difficulté 2 au prix d’une action capitale. En cas de réussite, l’animal vous considère comme amical et attaquera quiconque s’en prend à vous. Cette aptitude ne fonctionne pas sur les animaux redoutables ou légendaires. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 5.",
+    "description": "Au rang 1, chaque fois qu’un PNJ créature dont le profil affiche le mot-clef Mammifère, Lézard ou Insecte souhaite vous attaquer, jetez 1 $CD$ : si vous obtenez un résultat autre qu’un Effet, la créature choisit de ne pas vous attaquer, bien qu’elle puisse toujours s’en prendre à un autre personnage. Au rang 2, vous pouvez entreprendre un test de CHR + Survie de difficulté 2 au prix d’une action capitale. En cas de réussite, l’animal vous considère comme amical et attaquera quiconque s’en prend à vous. Cette aptitude ne fonctionne pas sur les animaux redoutables ou légendaires. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -12,13 +12,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 5,
     "canRobot": true
   },
   {
     "name": "AMPHIBIE",
-    "description": "L’eau est votre alliée. Au rang 1, vous ne subissez plus de dégâts de radiation lorsque vous nagez dans une eau irradiée et vous pouvez retenir votre souffle deux fois plus longtemps. Au rang 2, les ennemis ajoutent +2 à la difficulté de leurs tests pour vous repérer lorsque vous êtes complètement immergé. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 3.",
+    "description": "L’eau est votre alliée. Au rang 1, vous ne subissez plus de dégâts de radiation lorsque vous nagez dans une eau irradiée et vous pouvez retenir votre souffle deux fois plus longtemps. Au rang 2, les ennemis ajoutent +2 à la difficulté de leurs tests pour vous repérer lorsque vous êtes complètement immergé. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -27,13 +27,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 3,
     "canRobot": true
   },
   {
     "name": "ANTIRADIATIONS",
-    "description": "Votre résistance aux dégâts de radiation, quelle que soit la localisation, augmente de +1 par rang dans cette aptitude. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Votre résistance aux dégâts de radiation, quelle que soit la localisation, augmente de +1 par rang dans cette aptitude. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -42,13 +42,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 4,
     "canRobot": true
   },
   {
     "name": "ARMURIER",
-    "description": "Vous pouvez modifier les pièces d’armure grâce à des mods d’armure. Chaque rang dans cette aptitude débloque un rang de mod : le rang 1 débloque les mods de rang 1, le rang 2 débloque les mods de rang 2, etc. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Vous pouvez modifier les pièces d’armure grâce à des mods d’armure. Chaque rang dans cette aptitude débloque un rang de mod : le rang 1 débloque les mods de rang 1, le rang 2 débloque les mods de rang 2, etc. ",
     "ranks": 4,
     "s": 5,
     "p": 0,
@@ -57,7 +57,7 @@ export const PERKS:PerkDetail[] = [
     "i": 6,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 4,
     "canRobot": true
   },
@@ -87,7 +87,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 7,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -102,13 +102,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "BLITZ",
-    "description": "Lorsque vous vous placez à portée de main d’un adversaire et effectuez dans le même tour une attaque au corps à corps contre lui, vous pouvez relancer 1d20 du résultat de votre attaque. De plus, au rang 2, cette attaque inflige +1 $CD$ de dégâts. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 3.",
+    "description": "Lorsque vous vous placez à portée de main d’un adversaire et effectuez dans le même tour une attaque au corps à corps contre lui, vous pouvez relancer 1d20 du résultat de votre attaque. De plus, au rang 2, cette attaque inflige +1 $CD$ de dégâts. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -117,13 +117,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 9,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 3,
     "canRobot": true
   },
   {
     "name": "BOYAUX PLOMBÉS",
-    "description": "Au rang 1, vous pouvez relancer le $CD$ qui détermine si vous subissez des dégâts de radiation en consommant de la nourriture ou une boisson irradiée. Au rang 2, vous êtes immunisé aux dégâts de radiation infligés par la consommation de nourriture ou de boisson irradiée. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Au rang 1, vous pouvez relancer le $CD$ qui détermine si vous subissez des dégâts de radiation en consommant de la nourriture ou une boisson irradiée. Au rang 2, vous êtes immunisé aux dégâts de radiation infligés par la consommation de nourriture ou de boisson irradiée. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -132,7 +132,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 4,
     "canRobot": true
   },
@@ -147,7 +147,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -162,7 +162,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -177,7 +177,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -192,7 +192,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -207,7 +207,7 @@ export const PERKS:PerkDetail[] = [
     "i": 7,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -222,7 +222,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 7,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -237,7 +237,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 6,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -252,13 +252,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "COMMANDANT LASER",
-    "description": "Lorsque vous effectuez une attaque avec une arme à énergie à distance, ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Lorsque vous effectuez une attaque avec une arme à énergie à distance, ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. ",
     "ranks": 2,
     "s": 0,
     "p": 8,
@@ -273,7 +273,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "COMMANDO",
-    "description": "Lorsque vous effectuez une attaque à distance avec une arme dotée d’une cadence de tir supérieure ou égale à 3 (à l’exception des armes lourdes), ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 3.",
+    "description": "Lorsque vous effectuez une attaque à distance avec une arme dotée d’une cadence de tir supérieure ou égale à 3 (à l’exception des armes lourdes), ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -288,7 +288,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "COMPRÉHENSION",
-    "description": "Après avoir utilisé le bonus conféré par la lecture d’un magazine, jetez 1 $CD$. Si vous obtenez un Effet, vous pouvez utiliser ce bonus une fois de plus.",
+    "description": "Après avoir utilisé le bonus conféré par la lecture d’un magazine, jetez 1 $CD$ Si vous obtenez un Effet, vous pouvez utiliser ce bonus une fois de plus.",
     "ranks": 1,
     "s": 0,
     "p": 0,
@@ -297,7 +297,7 @@ export const PERKS:PerkDetail[] = [
     "i": 6,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -312,7 +312,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 5,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -327,7 +327,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 9,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -342,13 +342,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 6,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "DÉNICHEUR DE TRÉSORS",
-    "description": "Chaque fois que vous lancez les dés pour savoir combien d’argent vous trouvez, vous en trouvez plus. Au rang 1, vous trouvez +3 $CD$ supplémentaires de capsules. Au rang 2, vous trouvez +6 $CD$ supplémentaires de capsules. Enfin, au rang 3, vous trouvez +10 $CD$ supplémentaires de capsules. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Chaque fois que vous lancez les dés pour savoir combien d’argent vous trouvez, vous en trouvez plus. Au rang 1, vous trouvez +3 $CD$ supplémentaires de capsules. Au rang 2, vous trouvez +6 $CD$ supplémentaires de capsules. Enfin, au rang 3, vous trouvez +10 $CD$ supplémentaires de capsules. ",
     "ranks": 3,
     "s": 0,
     "p": 0,
@@ -372,7 +372,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -387,13 +387,13 @@ export const PERKS:PerkDetail[] = [
     "i": 7,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "EXERCICE",
-    "description": "Augmentez l’un de vos attributs S.P.E.C.I.A.L. de 1 rang. Comme toujours, vos attributs S.P.E.C.I.A.L. ne peuvent pas dépasser 10 avec cette méthode. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 2.",
+    "description": "Augmentez l’un de vos attributs S.P.E.C.I.A.L. de 1 rang. Comme toujours, vos attributs S.P.E.C.I.A.L. ne peuvent pas dépasser 10 avec cette méthode. ",
     "ranks": 10,
     "s": 0,
     "p": 0,
@@ -417,13 +417,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 6,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "EXPERT EN ROBOTIQUE",
-    "description": "Au rang 1, vous pouvez modifier l’armure des robots, leurs armes montées et leurs modules avec des mods de rang 1. Au rang 2, vous débloquez l’accès aux mods de rang 2 et vous réduisez de 1 la difficulté de tous vos tests de réparation de robots. Au rang 3, vous débloquez l’accès aux mods de rang 3 et vous pouvez reprogrammer les robots pour qu’ils remplissent une tout autre fonction ou altérer leur comportement, si le MJ vous y autorise. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Au rang 1, vous pouvez modifier l’armure des robots, leurs armes montées et leurs modules avec des mods de rang 1. Au rang 2, vous débloquez l’accès aux mods de rang 2 et vous réduisez de 1 la difficulté de tous vos tests de réparation de robots. Au rang 3, vous débloquez l’accès aux mods de rang 3 et vous pouvez reprogrammer les robots pour qu’ils remplissent une tout autre fonction ou altérer leur comportement, si le MJ vous y autorise. ",
     "ranks": 3,
     "s": 0,
     "p": 0,
@@ -438,7 +438,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "FANA D’ARMES",
-    "description": "Vous pouvez modifier les armes légères grâce à des mods d’arme. Chaque rang dans cette aptitude débloque un rang de mod : le rang 1 débloque les mods de rang 1, le rang 2 débloque les mods de rang 2, etc. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Vous pouvez modifier les armes légères grâce à des mods d’arme. Chaque rang dans cette aptitude débloque un rang de mod : le rang 1 débloque les mods de rang 1, le rang 2 débloque les mods de rang 2, etc. ",
     "ranks": 4,
     "s": 0,
     "p": 0,
@@ -462,7 +462,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -477,13 +477,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 6,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "FARFOUILLEUR",
-    "description": "Chaque fois que vous lancez les dés pour savoir combien de munitions vous trouvez, vous en trouvez plus. Au rang 1, vous trouvez +3 $CD$ supplémentaires de munitions. Au rang 2, vous trouvez +6 $CD$ supplémentaires de munitions. Enfin, au rang 3, vous trouvez +10 $CD$ supplémentaires de munitions. Les munitions supplémentaires que vous trouvez sont du même type que les munitions que vous dénichez initialement. Par exemple, si vous trouvez des cartouches 10 mm, cette aptitude augmente le nombre de cartouches 10 mm que vous dénichez. Si vous trouvez plusieurs types de munitions, Farfouilleur vous permet d’augmenter le nombre des munitions dont la rareté est la plus faible (en cas d’égalité, le MJ tranche). Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 5.",
+    "description": "Chaque fois que vous lancez les dés pour savoir combien de munitions vous trouvez, vous en trouvez plus. Au rang 1, vous trouvez +3 $CD$ supplémentaires de munitions. Au rang 2, vous trouvez +6 $CD$ supplémentaires de munitions. Enfin, au rang 3, vous trouvez +10 $CD$ supplémentaires de munitions. Les munitions supplémentaires que vous trouvez sont du même type que les munitions que vous dénichez initialement. Par exemple, si vous trouvez des cartouches 10 mm, cette aptitude augmente le nombre de cartouches 10 mm que vous dénichez. Si vous trouvez plusieurs types de munitions, Farfouilleur vous permet d’augmenter le nombre des munitions dont la rareté est la plus faible (en cas d’égalité, le MJ tranche). ",
     "ranks": 3,
     "s": 0,
     "p": 0,
@@ -492,7 +492,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 6,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 5,
     "canRobot": true
   },
@@ -507,7 +507,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 6,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -522,7 +522,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -537,7 +537,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 9,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -552,13 +552,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "FORGERON",
-    "description": "Vous pouvez modifier les armes de corps à corps grâce à des mods d’arme. Chaque rang dans cette aptitude débloque un rang de mod : le rang 1 débloque les mods de rang 1, le rang 2 débloque les mods de rang 2, etc. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Vous pouvez modifier les armes de corps à corps grâce à des mods d’arme. Chaque rang dans cette aptitude débloque un rang de mod : le rang 1 débloque les mods de rang 1, le rang 2 débloque les mods de rang 2, etc. ",
     "ranks": 3,
     "s": 6,
     "p": 0,
@@ -582,13 +582,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "FUSILIER",
-    "description": "Lorsque vous effectuez une attaque avec une arme à distance à deux mains dotée d’une cadence de tir inférieure ou égale à 2 (à l’exception des armes lourdes), ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. De plus, au rang 2, ajoutez l’effet de dégâts Perforant 1. Si l’attaque bénéficie déjà de cet effet, la valeur de ce dernier augmente de 1. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Lorsque vous effectuez une attaque avec une arme à distance à deux mains dotée d’une cadence de tir inférieure ou égale à 2 (à l’exception des armes lourdes), ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. De plus, au rang 2, ajoutez l’effet de dégâts Perforant 1. Si l’attaque bénéficie déjà de cet effet, la valeur de ce dernier augmente de 1. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -603,7 +603,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "FUSION",
-    "description": "Lorsque vous tuez un ennemi avec une arme à énergie, il explose. Jetez un nombre de $CD$ égal à la moitié de la valeur de dégâts de l’arme (arrondie à l’inférieur). Pour chaque Effet obtenu, une créature située à portée courte ou inférieure de votre victime (en commençant par la plus proche) subit un nombre de points de dégâts énergétiques égal au total obtenu sur les $CD$.",
+    "description": "Lorsque vous tuez un ennemi avec une arme à énergie, il explose. Jetez un nombre de $CD$ égal à la moitié de la valeur de dégâts de l’arme (arrondie à l’inférieur). Pour chaque Effet obtenu, une créature située à portée courte ou inférieure de votre victime (en commençant par la plus proche) subit un nombre de points de dégâts énergétiques égal au total obtenu sur les $CD$",
     "ranks": 1,
     "s": 0,
     "p": 10,
@@ -612,7 +612,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -627,13 +627,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": false
   },
   {
     "name": "GUÉRISSEUR",
-    "description": "Lorsque vous soignez les PV d’un patient par l’action mineure Porter secours, soignez 1 PV supplémentaire par rang dans cette aptitude. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 5.",
+    "description": "Lorsque vous soignez les PV d’un patient par l’action mineure Porter secours, soignez 1 PV supplémentaire par rang dans cette aptitude. ",
     "ranks": 3,
     "s": 0,
     "p": 0,
@@ -642,7 +642,7 @@ export const PERKS:PerkDetail[] = [
     "i": 7,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 5,
     "canRobot": true
   },
@@ -657,7 +657,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -672,7 +672,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -687,7 +687,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -702,13 +702,13 @@ export const PERKS:PerkDetail[] = [
     "i": 8,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "LA TAILLE COMPTE",
-    "description": "Lorsque vous effectuez une attaque à distance avec une arme lourde, ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Lorsque vous effectuez une attaque à distance avec une arme lourde, ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. ",
     "ranks": 3,
     "s": 0,
     "p": 0,
@@ -717,13 +717,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 6,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 4,
     "canRobot": true
   },
   {
     "name": "LOCOMOTIVE",
-    "description": "Au prix d’une action capitale, vous pouvez charger si vous portez une armure assistée ou êtes un super mutant. Il s’agit d’une action de déplacement et vous ne pouvez pas vous déplacer ou sprinter au cours du même tour. Lorsque vous entreprenez cette action, vous vous placez à portée de main d’un ennemi situé à portée moyenne (1 zone) ou inférieure, puis effectuez un test de FOR + Athlétisme de difficulté 2. En cas de réussite, votre ennemi subit vos dégâts à mains nues normaux et vous le renversez. Au rang 2, ajouter +1 $CD$ et l’effet de dégâts Étourdissant aux dégâts infligés. À la discrétion du MJ, des créatures particulièrement massives ou robustes peuvent ne pas être renversées par cette action. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 5.",
+    "description": "Au prix d’une action capitale, vous pouvez charger si vous portez une armure assistée ou êtes un super mutant. Il s’agit d’une action de déplacement et vous ne pouvez pas vous déplacer ou sprinter au cours du même tour. Lorsque vous entreprenez cette action, vous vous placez à portée de main d’un ennemi situé à portée moyenne (1 zone) ou inférieure, puis effectuez un test de FOR + Athlétisme de difficulté 2. En cas de réussite, votre ennemi subit vos dégâts à mains nues normaux et vous le renversez. Au rang 2, ajouter +1 $CD$ et l’effet de dégâts Étourdissant aux dégâts infligés. À la discrétion du MJ, des créatures particulièrement massives ou robustes peuvent ne pas être renversées par cette action. ",
     "ranks": 2,
     "s": 9,
     "p": 0,
@@ -732,7 +732,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 5,
     "canRobot": true
   },
@@ -747,7 +747,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 8,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -762,7 +762,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 9,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -777,13 +777,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 9,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "MÉTABOLISME RAPIDE",
-    "description": "Lorsque vous récupérez des PV par un autre moyen que le repos, vous récupérez 1 PV supplémentaire par rang dans cette aptitude. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 3.",
+    "description": "Lorsque vous récupérez des PV par un autre moyen que le repos, vous récupérez 1 PV supplémentaire par rang dans cette aptitude. ",
     "ranks": 3,
     "s": 0,
     "p": 0,
@@ -792,7 +792,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 3,
     "canRobot": false
   },
@@ -807,7 +807,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 7,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -822,7 +822,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 7,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -837,7 +837,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -852,7 +852,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 8,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -867,7 +867,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -882,7 +882,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -897,13 +897,13 @@ export const PERKS:PerkDetail[] = [
     "i": 9,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "PICKPOCKET",
-    "description": "Au rang 1, vous pouvez ignorer la première complication obtenue lors de tout test d’AGI + Discrétion destiné à dérober un objet que porte une cible ou à glisser quelque chose sur elle. Au rang 2, vous pouvez relancer 1d20 lorsque vous essayez de faire les poches de quelqu’un. Au rang 3, réduisez de 1 la difficulté de tout test destiné à faire les poches de quelqu’un. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 3.",
+    "description": "Au rang 1, vous pouvez ignorer la première complication obtenue lors de tout test d’AGI + Discrétion destiné à dérober un objet que porte une cible ou à glisser quelque chose sur elle. Au rang 2, vous pouvez relancer 1d20 lorsque vous essayez de faire les poches de quelqu’un. Au rang 3, réduisez de 1 la difficulté de tout test destiné à faire les poches de quelqu’un. ",
     "ranks": 3,
     "s": 0,
     "p": 8,
@@ -912,7 +912,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 8,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 3,
     "canRobot": true
   },
@@ -927,7 +927,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -942,7 +942,7 @@ export const PERKS:PerkDetail[] = [
     "i": 8,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -957,13 +957,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "PISTOLERO",
-    "description": "Lorsque vous effectuez une attaque avec une arme à distance à une main dotée d’une cadence de tir inférieure ou égale à 2, ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. De plus, vous pouvez relancer le dé de localisation des dégâts. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Lorsque vous effectuez une attaque avec une arme à distance à une main dotée d’une cadence de tir inférieure ou égale à 2, ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. De plus, vous pouvez relancer le dé de localisation des dégâts. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -978,7 +978,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "POING DE FER",
-    "description": "Au rang 1, vos attaques à mains nues infligent +1 $CD$ de dégâts. Au rang 2, elles obtiennent en plus l’effet de dégâts Brutal. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 5.",
+    "description": "Au rang 1, vos attaques à mains nues infligent +1 $CD$ de dégâts. Au rang 2, elles obtiennent en plus l’effet de dégâts Brutal. ",
     "ranks": 2,
     "s": 6,
     "p": 0,
@@ -987,7 +987,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 5,
     "canRobot": true
   },
@@ -1002,13 +1002,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "PRÉSENCE TERRIFIANTE",
-    "description": "Vous pouvez relancer 1d20 lors de tout test de Discours destiné à menacer ou effrayer quelqu’un. Au rang 2, en plein combat, vous pouvez consacrer une action capitale à tenter de menacer un ennemi situé à portée moyenne ou inférieure, grâce à un test de FOR + Discours de difficulté 2. En cas de réussite, cet ennemi doit s’éloigner de vous au cours de son prochain tour (il peut néanmoins entreprendre toute autre action qu’il souhaite). Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 5.",
+    "description": "Vous pouvez relancer 1d20 lors de tout test de Discours destiné à menacer ou effrayer quelqu’un. Au rang 2, en plein combat, vous pouvez consacrer une action capitale à tenter de menacer un ennemi situé à portée moyenne ou inférieure, grâce à un test de FOR + Discours de difficulté 2. En cas de réussite, cet ennemi doit s’éloigner de vous au cours de son prochain tour (il peut néanmoins entreprendre toute autre action qu’il souhaite). ",
     "ranks": 2,
     "s": 6,
     "p": 0,
@@ -1023,7 +1023,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "PYROMANE",
-    "description": "Lorsque vous effectuez une attaque avec une arme basée sur le feu, ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Lorsque vous effectuez une attaque avec une arme basée sur le feu, ajouter +1 $CD$ aux dégâts de l’arme par rang dans cette aptitude. ",
     "ranks": 3,
     "s": 0,
     "p": 0,
@@ -1038,7 +1038,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "RAGE DE NERD !",
-    "description": "Lorsque vous disposez de moins de ¼ de vos PV maximaux, ajouter +1 à votre RD balistiques, +1 à votre RD énergétiques et +1 $CD$ aux dégâts de toutes vos attaques. Au rang 2, ces bonus sont portés à +2 RD et +2 $CD$. Au rang 3, ils sont portés à +3 RD et +3 $CD$. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 5.",
+    "description": "Lorsque vous disposez de moins de ¼ de vos PV maximaux, ajouter +1 à votre RD balistiques, +1 à votre RD énergétiques et +1 $CD$ aux dégâts de toutes vos attaques. Au rang 2, ces bonus sont portés à +2 RD et +2 $CD$ . Au rang 3, ils sont portés à +3 RD et +3 $CD$ ",
     "ranks": 3,
     "s": 0,
     "p": 0,
@@ -1062,13 +1062,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "RECYCLEUR",
-    "description": "Lorsque vous recyclez un objet, vous pouvez obtenir des composants peu fréquents au même titre que des composants fréquents (cf. page 208). Au rang 2, vous pouvez également obtenir des composants rares. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 5.",
+    "description": "Lorsque vous recyclez un objet, vous pouvez obtenir des composants peu fréquents au même titre que des composants fréquents (cf. page 208). Au rang 2, vous pouvez également obtenir des composants rares. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -1083,7 +1083,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "RÉFRACTEUR",
-    "description": "Votre résistance aux dégâts énergétiques, quelle que soit la localisation, augmente de +1 par rang dans cette aptitude. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Votre résistance aux dégâts énergétiques, quelle que soit la localisation, augmente de +1 par rang dans cette aptitude. ",
     "ranks": 2,
     "s": 0,
     "p": 6,
@@ -1092,13 +1092,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 7,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 4,
     "canRobot": true
   },
   {
     "name": "REINS D’ACIER",
-    "description": "Votre charge maximale augmente de 12,5 kilogrammes par rang dans cette aptitude. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 2.",
+    "description": "Votre charge maximale augmente de 12,5 kilogrammes par rang dans cette aptitude. ",
     "ranks": 3,
     "s": 5,
     "p": 0,
@@ -1107,13 +1107,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 2,
     "canRobot": true
   },
   {
     "name": "RÉSISTANCE CHIMIQUE",
-    "description": "Au rang 1, jetez 1 $CD$ de moins (jusqu’à un minimum de 0) lorsque vous déterminez si vous devenez dépendant à une drogue. Au rang 2, vous ne pouvez plus être dépendant aux drogues. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Au rang 1, jetez 1 $CD$ de moins (jusqu’à un minimum de 0) lorsque vous déterminez si vous devenez dépendant à une drogue. Au rang 2, vous ne pouvez plus être dépendant aux drogues. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -1122,7 +1122,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 4,
     "canRobot": true
   },
@@ -1143,7 +1143,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "ROBUSTESSE",
-    "description": "Votre résistance aux dégâts balistiques, quelle que soit la localisation, augmente de +1 par rang dans cette aptitude. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Votre résistance aux dégâts balistiques, quelle que soit la localisation, augmente de +1 par rang dans cette aptitude. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -1152,7 +1152,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 6,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 4,
     "canRobot": true
   },
@@ -1167,13 +1167,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 6,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "SCIENTIFIQUE",
-    "description": "Vous pouvez modifier les armes à énergie grâce à des mods d’arme et vous pouvez aussi fabriquer certains mods d’armure avancés. Chaque rang dans cette aptitude débloque un rang de mod : le rang 1 débloque les mods de rang 1, le rang 2 débloque les mods de rang 2, etc. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 4.",
+    "description": "Vous pouvez modifier les armes à énergie grâce à des mods d’arme et vous pouvez aussi fabriquer certains mods d’armure avancés. Chaque rang dans cette aptitude débloque un rang de mod : le rang 1 débloque les mods de rang 1, le rang 2 débloque les mods de rang 2, etc. ",
     "ranks": 4,
     "s": 0,
     "p": 0,
@@ -1197,7 +1197,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -1212,7 +1212,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 6,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -1227,7 +1227,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -1248,7 +1248,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "SQUELETTE ADAMANTIN",
-    "description": "Le montant de dégâts nécessaires pour vous infliger un coup critique augmente d’une valeur égale à vos rangs dans cette aptitude. Par exemple, si vous disposez d’un rang dans cette aptitude, vous subissez un coup critique lorsque vous recevez au moins 6 points de dégâts, au lieu de 5 ou plus en temps normal. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 3.",
+    "description": "Le montant de dégâts nécessaires pour vous infliger un coup critique augmente d’une valeur égale à vos rangs dans cette aptitude. Par exemple, si vous disposez d’un rang dans cette aptitude, vous subissez un coup critique lorsque vous recevez au moins 6 points de dégâts, au lieu de 5 ou plus en temps normal. ",
     "ranks": 3,
     "s": 0,
     "p": 0,
@@ -1257,13 +1257,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 3,
     "canRobot": true
   },
   {
     "name": "STUDIEUX",
-    "description": "Augmentez deux de vos compétences de 1 rang, ou l’une de vos compétences de 2 rangs. Comme toujours, vos compétences ne peuvent pas dépasser 6 avec cette méthode. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 3.",
+    "description": "Augmentez deux de vos compétences de 1 rang, ou l’une de vos compétences de 2 rangs. Comme toujours, vos compétences ne peuvent pas dépasser 6 avec cette méthode. ",
     "ranks": 10,
     "s": 0,
     "p": 0,
@@ -1278,7 +1278,7 @@ export const PERKS:PerkDetail[] = [
   },
   {
     "name": "TIRE-AU-FLANC",
-    "description": "Au rang 1, lorsque vous entreprenez l’action capitale Se protéger, réduisez de 1 la difficulté du test de compétence. Au rang 2, améliorer votre défense ne vous coûte plus que 1 PA. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 6.",
+    "description": "Au rang 1, lorsque vous entreprenez l’action capitale Se protéger, réduisez de 1 la difficulté du test de compétence. Au rang 2, améliorer votre défense ne vous coûte plus que 1 PA. ",
     "ranks": 2,
     "s": 0,
     "p": 0,
@@ -1302,13 +1302,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 6,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "TONTON FLINGUEUR",
-    "description": "Lorsque vous réussissez une attaque à distance, vous pouvez dépenser 1 PA et 1 munition pour toucher une cible supplémentaire située à portée courte ou inférieure de votre cible initiale. Ces deux cibles subissent les mêmes dégâts. Au rang 2, vous pouvez dépenser 2 PA et 2 munitions pour toucher deux cibles supplémentaires. Au rang 3, vous pouvez dépenser 3 PA et 3 munitions pour toucher trois cibles supplémentaires. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 5.",
+    "description": "Lorsque vous réussissez une attaque à distance, vous pouvez dépenser 1 PA et 1 munition pour toucher une cible supplémentaire située à portée courte ou inférieure de votre cible initiale. Ces deux cibles subissent les mêmes dégâts. Au rang 2, vous pouvez dépenser 2 PA et 2 munitions pour toucher deux cibles supplémentaires. Au rang 3, vous pouvez dépenser 3 PA et 3 munitions pour toucher trois cibles supplémentaires. ",
     "ranks": 3,
     "s": 0,
     "p": 0,
@@ -1317,7 +1317,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 10,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 5,
     "canRobot": true
   },
@@ -1332,13 +1332,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "TUEUR EN SÉRIE",
-    "description": "Lorsque vous tuez au moins un ennemi avec une attaque, jetez 1 $CD$. Si vous obtenez un Effet, ajoutez 2 PA à la réserve du groupe.",
+    "description": "Lorsque vous tuez au moins un ennemi avec une attaque, jetez 1 $CD$ Si vous obtenez un Effet, ajoutez 2 PA à la réserve du groupe.",
     "ranks": 1,
     "s": 0,
     "p": 0,
@@ -1347,7 +1347,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 8,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -1362,7 +1362,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -1377,7 +1377,7 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 0,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
@@ -1392,13 +1392,13 @@ export const PERKS:PerkDetail[] = [
     "i": 0,
     "a": 7,
     "l": 0,
-    "level": 0,
+    "level": 1,
     "rankThreshold": 0,
     "canRobot": true
   },
   {
     "name": "VITALITÉ",
-    "description": "Ajoutez votre valeur d’Endurance à votre maximum de points de vie. Chaque fois que vous sélectionnez cette aptitude, le niveau requis augmente de 5.",
+    "description": "Ajoutez votre valeur d’Endurance à votre maximum de points de vie. ",
     "ranks": 5,
     "s": 0,
     "p": 0,
