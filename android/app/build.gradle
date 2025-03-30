@@ -7,7 +7,7 @@ android {
     abortOnError false
     checkReleaseBuilds false
   }
-  compileSdkVersion rootProject.ext.compileSdkVersion
+  compileSdk rootProject.ext.compileSdkVersion
   defaultConfig {
     applicationId "org.kyne.jdrhelper"
     minSdkVersion rootProject.ext.minSdkVersion
