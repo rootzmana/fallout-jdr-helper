@@ -591,7 +591,7 @@ export const ROBOTS: MobDetails[] = [
         "description": "La version MK V ressemble par bien des aspects à ses versions antérieures. Ces tourelles ne sont toutefois pas que conçues pour arroser les ennemis de balles, mais aussi pour les étourdir, ce qui les rend plus vulnérables à leur feu soutenu. Les tourelles MK V tirent des 5.56 mm incendiaires et peuvent être identifiées grâce à leur peinture d’un gris-vert sombre."
     },
     {
-        "name": "Tourelle Mitrailleuse (fixée À Une Paroi)",
+        "name": "Tourelle Mitrailleuse - fixée à une paroi",
         "level": "5",
         "keywords": "Robot",
         "type": "Créature Normale",
@@ -647,7 +647,7 @@ export const ROBOTS: MobDetails[] = [
         "description": "Les tourelles fixées à des parois sont bien plus petites que leurs consœurs montées sur trépied. Elles sont placées dans de petits casiers semi-sphériques pouvant être fixés aux murs ou aux plafonds… et passant facilement inaperçus. Ces tourelles de taille plus modeste tirent des munitions de 10 mm, mais rattrapent ce handicap par la grande vélocité de leurs rafales et la présence d’autres tourelles disposées dans la même pièce. En dépit de leur taille, elles disposent des mêmes technologies de visée avancées et de scanners biométriques que leurs consœurs sur trépied."
     },
     {
-        "name": "Tourelle Mitrailleuse 3 Coups (fixée À Une Paroi)",
+        "name": "Tourelle Mitrailleuse 3 Coups - fixée à une paroi",
         "level": "10",
         "keywords": "Robot",
         "type": "Créature Normale",
@@ -703,7 +703,7 @@ export const ROBOTS: MobDetails[] = [
         "description": "La version 3 coups de cette tourelle est capable de fournir une cadence de tir plus soutenue, ce qui en fait un minigun de taille réduite fixé au mur. Elle ne tire, certes, que du 10 mm, mais qu’elle le fasse trois balles à la fois cause plus de dégâts à ses cibles, surtout à courte portée."
     },
     {
-        "name": "Tourelle Laser (fixée À Une Paroi)",
+        "name": "Tourelle Laser - fixée à une paroi",
         "level": "5",
         "keywords": "Robot",
         "type": "Créature Normale",
@@ -759,7 +759,7 @@ export const ROBOTS: MobDetails[] = [
         "description": "Les tourelles laser n’ont pas d’équivalent sur trépied, mais sont bâties comme les autres machines sur paroi. Au lieu de munitions 10 mm, elles tirent un rayon laser semblable à ceux des pistolets et fusils laser. Ce modèle expulse des traits d’énergie uniques, mais en succession rapide. Comme les autres tourelles, elles gardent les Abris, les bâtiments bureaucratiques et les bases militaires."
     },
     {
-        "name": "Tourelle Laser 3 Coups (fixée À Une Paroi)",
+        "name": "Tourelle Laser 3 Coups - fixée à une paroi",
         "level": "10",
         "keywords": "Robot",
         "type": "Créature Normale",
