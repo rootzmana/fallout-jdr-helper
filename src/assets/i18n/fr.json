@@ -136,6 +136,7 @@
     "LUCK": "Chance",
     "LEVEL": "Niveau",
     "CANTROBOT": "Inaccessible au robot",
+    "CANTCOMPANION": "Inaccessible si vous avez déjà un compagnon allié",
     "RANKTRESHOLD": " par rang"
   },
   "BESTIARY": {

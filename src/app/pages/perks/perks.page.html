@@ -48,7 +48,13 @@
         <ion-checkbox type="checkbox" aria-label='MIND' name="mind" 
                       label-placement="stacked" alignment="center" 
                       fill="outline" (ionChange)="search()" [(ngModel)]="isRobot">
-          Robot
+          Robot ?
+        </ion-checkbox>
+      </ion-col>
+      <ion-col>
+        <ion-checkbox type="checkbox" aria-label='MIND' name="mind" label-placement="stacked" alignment="center"
+          fill="outline" (ionChange)="search()" [(ngModel)]="isCompanion">
+          Compagnon ?
         </ion-checkbox>
       </ion-col>
     </ion-row>
@@ -73,7 +79,8 @@
           {{ perk.i === 0 ? "" : ("PERKS.INTELLIGENCE" | translate) + " " + perk.i + " ; "}}
           {{ perk.a === 0 ? "" : ("PERKS.AGILITY" | translate) + " " + perk.a + " ; "}}
           {{ perk.l === 0 ? "" : ("PERKS.LUCK" | translate) + " " + perk.l + " ; "}}
-          {{ perk.canRobot ? "" : ("PERKS.CANTROBOT" | translate)+ " ; "}}<br/>
+          {{ perk.canRobot ? "" : ("PERKS.CANTROBOT" | translate)+ " ; "}}
+          {{ perk.canCompanion ? "" : ("PERKS.CANTCOMPANION" | translate)+ " ; "}}<br /> <br />
           <strong>Description</strong> :
           <app-rich-text-display [propertyText]="perk.description"></app-rich-text-display>
           <br/>
