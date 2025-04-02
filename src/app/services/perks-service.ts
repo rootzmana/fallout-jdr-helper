@@ -1,18 +1,20 @@
 import {ToastController} from '@ionic/angular';
 import {Injectable} from '@angular/core';
-import {PerkDetail} from "../data/perks/perks.model";
-import {PERKS} from "../data/perks/perks";
+import {PerkDetail} from '../data/perks/perks.model';
+import {PERKS} from '../data/perks/perks';
 
 export interface Stats {
-  level:number;
-  s:number;
-  p:number;
-  e:number;
-  c:number;
-  i:number;
-  a:number;
-  l:number;
-  isRobot:boolean;
+  sources: string[];
+  level: number;
+  s: number;
+  p: number;
+  e: number;
+  c: number;
+  i: number;
+  a: number;
+  l: number;
+  isRobot: boolean;
+  isCompanion: boolean;
 }
 
 @Injectable({providedIn: 'root'})
@@ -21,11 +23,12 @@ export class PerksService {
   constructor() {
   }
 
-  findByCharacterStats(stats: Stats) : PerkDetail[]{
+  findByCharacterStats(stats: Stats): PerkDetail[]{
     const result: PerkDetail[] = [];
-    for(let perk of PERKS){
-      const checkRobot = !stats.isRobot || perk.canRobot
-      
+    for(const perk of PERKS){
+      const checkRobot = !stats.isRobot || perk.canRobot;
+      const checkCompanion = !stats.isCompanion || perk.canCompanion;
+
 
       if (stats.s >= perk.s
         && stats.p >= perk.p
@@ -35,10 +38,12 @@ export class PerksService {
         && stats.a >= perk.a
         && stats.l >= perk.l
         && stats.level >= perk.level
-        && checkRobot) {
+        && checkRobot
+        && checkCompanion
+        && stats.sources.includes(perk.source)) {
         result.push(perk);
       }
-      
+
     }
 
     return result;
