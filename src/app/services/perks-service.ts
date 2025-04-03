@@ -28,16 +28,7 @@ export class PerksService {
     for(const perk of PERKS){
       const checkRobot = !stats.isRobot || perk.canRobot;
       const checkCompanion = !stats.isCompanion || perk.canCompanion;
-
-
-      if (stats.s >= perk.s
-        && stats.p >= perk.p
-        && stats.e >= perk.e
-        && stats.c >= perk.c
-        && stats.i >= perk.i
-        && stats.a >= perk.a
-        && stats.l >= perk.l
-        && stats.level >= perk.level
+      if (this.manageSpecialAndLevelChanges(stats, perk)
         && checkRobot
         && checkCompanion
         && stats.sources.includes(perk.source)) {
@@ -47,5 +38,25 @@ export class PerksService {
     }
 
     return result;
+  }
+
+  manageSpecialAndLevelChanges(stats: Stats, perk: PerkDetail): boolean {
+    return stats.level == null &&
+      stats.s == null &&
+      stats.p == null &&
+      stats.e == null &&
+      stats.c == null &&
+      stats.i == null &&
+      stats.a == null &&
+      stats.l == null
+      ? true :
+        stats.level >= perk.level
+        && stats.s >= perk.s
+        && stats.p >= perk.p
+        && stats.e >= perk.e
+        && stats.c >= perk.c
+        && stats.i >= perk.i
+        && stats.a >= perk.a
+        && stats.l >= perk.l;
   }
 }

@@ -53,9 +53,16 @@ export class PerksPage implements OnInit {
 
   search() {
     this.searchQuery = '';
-    this.result = this.perksService.findByCharacterStats({s:this.s,p:this.p,e:this.e,c:this.c,i:this.i,a:this.a,l:this.l,level:this.level,isRobot:this.isRobot,isCompanion:this.isCompanion,sources:this.sources});
+    const level = this.level == null ? 1 : this.level;
+    this.result = this.perksService.findByCharacterStats({s:this.s,p:this.p,e:this.e,c:this.c,i:this.i,a:this.a,l:this.l,level,isRobot:this.isRobot,isCompanion:this.isCompanion,sources:this.sources});
     this.filteredResult = [];
     this.result.forEach(perk => this.filteredResult.push(Object.assign({}, perk)));
+  }
+
+  handleSourcesChange(event: CustomEvent) {
+    this.sources = event.detail.value;
+    console.log(this);
+    this.search();
   }
 
   reinit() {

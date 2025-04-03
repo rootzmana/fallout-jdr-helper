@@ -58,6 +58,18 @@
         </ion-checkbox>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-select aria-label="sources" placeholder="Sélectionner une source" [multiple]="true" interface="popover" (ionChange)="handleSourcesChange($event)">
+              <ion-select-option value="CRB">Livre de base</ion-select-option>
+              <ion-select-option value="SETTLERS">Guide des colonies</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
 
     <ion-searchbar [placeholder]="'PERKS.FILTER' | translate" show-clear-button="focus"
                    debounce="200" (ionInput)="searchPerks()" [(ngModel)]="searchQuery"></ion-searchbar>
