@@ -16,6 +16,9 @@ import {PerksService} from '../../services/perks-service';
 })
 export class PerksPage implements OnInit {
 
+  static readonly _sources_ = ['CRB', 'SETTLERS'];
+ 
+
   result: PerkDetail[];
   filteredResult: PerkDetail[];
   s: number=null;
@@ -28,7 +31,7 @@ export class PerksPage implements OnInit {
   level: number=null;
   isRobot = false;
   isCompanion = false;
-  sources: string[] = ['CRB', 'SETTLERS'];
+  sources: string[] = [];
   searchQuery = '';
 
 
@@ -36,7 +39,7 @@ export class PerksPage implements OnInit {
   }
 
   ngOnInit() {
-    this.result = this.perksService.findByCharacterStats({s:10,p:10,e:10,c:10,i:10,a:10,l:10,level:100,isRobot:false,isCompanion:false,sources:['CRB', 'SETTLERS']});
+    this.result = this.perksService.findByCharacterStats({s:10,p:10,e:10,c:10,i:10,a:10,l:10,level:100,isRobot:false,isCompanion:false,sources:PerksPage._sources_});
     this.filteredResult = [];
     this.result.forEach(perk => this.filteredResult.push(Object.assign({}, perk)));
   }
@@ -53,16 +56,13 @@ export class PerksPage implements OnInit {
 
   search() {
     this.searchQuery = '';
-    const level = this.level == null ? 1 : this.level;
-    this.result = this.perksService.findByCharacterStats({s:this.s,p:this.p,e:this.e,c:this.c,i:this.i,a:this.a,l:this.l,level,isRobot:this.isRobot,isCompanion:this.isCompanion,sources:this.sources});
+
+    const level = this.level == null ? 100 : this.level;
+    const sources = this.sources.length == 0 ? PerksPage._sources_ : this.sources;
+    
+    this.result = this.perksService.findByCharacterStats({s:this.s,p:this.p,e:this.e,c:this.c,i:this.i,a:this.a,l:this.l,level,isRobot:this.isRobot,isCompanion:this.isCompanion,sources:sources});
     this.filteredResult = [];
     this.result.forEach(perk => this.filteredResult.push(Object.assign({}, perk)));
-  }
-
-  handleSourcesChange(event: CustomEvent) {
-    this.sources = event.detail.value;
-    console.log(this);
-    this.search();
   }
 
   reinit() {
@@ -76,7 +76,7 @@ export class PerksPage implements OnInit {
     this.level = null;
     this.isRobot = false;
     this.isCompanion = false;
-    this.sources = ['CRB', 'SETTLERS'];
+    this.sources = [];
     this.ngOnInit();
   }
 }

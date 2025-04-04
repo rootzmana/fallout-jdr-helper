@@ -137,7 +137,11 @@
     "LEVEL": "Niveau",
     "CANTROBOT": "Inaccessible au robot",
     "CANTCOMPANION": "Inaccessible si vous avez déjà un compagnon allié",
-    "RANKTRESHOLD": " par rang"
+    "RANKTRESHOLD": " par rang",
+    "SOURCES" : {
+      "CRB": "Livre de base",
+      "SETTLERS" : "Guide des colonies"
+    }
   },
   "BESTIARY": {
     "CREATURE": "Créature",

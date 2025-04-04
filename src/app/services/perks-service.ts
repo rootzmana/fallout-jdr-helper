@@ -36,13 +36,13 @@ export class PerksService {
       }
 
     }
-
+    // Order by name 
+    result.sort((a, b) => a.name.localeCompare(b.name))
     return result;
   }
 
   manageSpecialAndLevelChanges(stats: Stats, perk: PerkDetail): boolean {
-    return stats.level == null &&
-      stats.s == null &&
+    return stats.s == null &&
       stats.p == null &&
       stats.e == null &&
       stats.c == null &&
@@ -50,8 +50,7 @@ export class PerksService {
       stats.a == null &&
       stats.l == null
       ? true :
-        stats.level >= perk.level
-        && stats.s >= perk.s
+        stats.s >= perk.s
         && stats.p >= perk.p
         && stats.e >= perk.e
         && stats.c >= perk.c

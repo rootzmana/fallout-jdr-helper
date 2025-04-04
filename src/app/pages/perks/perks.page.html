@@ -62,7 +62,7 @@
       <ion-col>
         <ion-list>
           <ion-item>
-            <ion-select aria-label="sources" placeholder="Sélectionner une source" [multiple]="true" interface="popover" (ionChange)="handleSourcesChange($event)">
+            <ion-select aria-label="sources" placeholder="Sélectionner une source" [(ngModel)]="sources" [multiple]="true" interface="popover" (ionChange)="search()">
               <ion-select-option value="CRB">Livre de base</ion-select-option>
               <ion-select-option value="SETTLERS">Guide des colonies</ion-select-option>
             </ion-select>
@@ -95,7 +95,8 @@
           {{ perk.canCompanion ? "" : ("PERKS.CANTCOMPANION" | translate)+ " ; "}}<br /> <br />
           <strong>Description</strong> :
           <app-rich-text-display [propertyText]="perk.description"></app-rich-text-display>
-          <br/>
+          <br/><br/>
+          <i><sub>Source : {{ perk.source == "CRB" ? ("PERKS.SOURCES.CRB" | translate) :("PERKS.SOURCES.SETTLERS" | translate) }}</sub></i>
         </p>
       </ng-container>
     </ion-list>
