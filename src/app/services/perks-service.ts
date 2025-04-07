@@ -36,8 +36,8 @@ export class PerksService {
       }
 
     }
-    // Order by name 
-    result.sort((a, b) => a.name.localeCompare(b.name))
+    // Order by Name
+    result.sort((a, b) => a.Name.localeCompare(b.Name));
     return result;
   }
 

@@ -1,6 +1,6 @@
 export interface PerkDetail {
   source: string;
-  name: string;
+  Name: string;
   description: string;
   s: number;
   p: number;

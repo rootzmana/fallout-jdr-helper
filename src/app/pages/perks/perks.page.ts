@@ -17,7 +17,7 @@ import {PerksService} from '../../services/perks-service';
 export class PerksPage implements OnInit {
 
   static readonly _sources_ = ['CRB', 'SETTLERS'];
- 
+
 
   result: PerkDetail[];
   filteredResult: PerkDetail[];
@@ -47,7 +47,7 @@ export class PerksPage implements OnInit {
   searchPerks() {
     this.filteredResult = [];
     this.result.forEach(perk => {
-      if(perk.name.toLowerCase().includes(this.searchQuery.toLowerCase())){
+      if(perk.Name.toLowerCase().includes(this.searchQuery.toLowerCase())){
         this.filteredResult.push(Object.assign({}, perk));
       }
     });
@@ -59,8 +59,8 @@ export class PerksPage implements OnInit {
 
     const level = this.level == null ? 100 : this.level;
     const sources = this.sources.length == 0 ? PerksPage._sources_ : this.sources;
-    
-    this.result = this.perksService.findByCharacterStats({s:this.s,p:this.p,e:this.e,c:this.c,i:this.i,a:this.a,l:this.l,level,isRobot:this.isRobot,isCompanion:this.isCompanion,sources:sources});
+
+    this.result = this.perksService.findByCharacterStats({s:this.s,p:this.p,e:this.e,c:this.c,i:this.i,a:this.a,l:this.l,level,isRobot:this.isRobot,isCompanion:this.isCompanion,sources});
     this.filteredResult = [];
     this.result.forEach(perk => this.filteredResult.push(Object.assign({}, perk)));
   }
