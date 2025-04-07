@@ -4,6 +4,7 @@ import {IonSearchbar} from '@ionic/angular';
 import {DataId, REGISTERED_DATA_SECTIONS} from '../../data/generic-data-lang';
 import {LanguageService} from '../../shared/language.service';
 import {MOD_DEF, MODS_DATA_TABLE} from '../../data/mods/mod-lang';
+import { PerksService } from 'src/app/services/perks-service';
 
 @Component({
   selector: 'app-quick-search',
@@ -48,11 +49,17 @@ export class QuickSearchPage implements OnInit {
           const items = this.searchPipe.transform(candidatedata.data, searchText);
           if (items.length > 0) {
             newDefinitions.push(candidatedata);
-            newItemTypes.push(items);
+            // If data type is perk => tranform to generic data in order to match to quick search
+            if (candidatedata.type === 'perks') {
+              newItemTypes.push(PerksService.tranformToGenericData(items));
+            } else {
+              newItemTypes.push(items);
+            }
           }
         }
       }
     }
+
     const translatedItems = MODS_DATA_TABLE[this.languageService.getCurrentLanguage()];
     for (const modType of Object.keys(translatedItems)) {
       const modEntries = translatedItems[modType];

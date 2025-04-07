@@ -1,7 +1,7 @@
 import {ToastController} from '@ionic/angular';
 import {Injectable} from '@angular/core';
 import {PerkDetail} from '../data/perks/perks.model';
-import {PERKS} from '../data/perks/perks';
+import { PERKS } from '../data/perks/perks';
 
 export interface Stats {
   sources: string[];
@@ -21,6 +21,29 @@ export interface Stats {
 export class PerksService {
 
   constructor() {
+  }
+
+  static tranformToGenericData(perks: PerkDetail[]) {
+    perks.forEach(perk => {
+    const level = perk.ranks === 1 ? perk.level + '+' :
+        perk.level + '+, +' + perk.rankThreshold + ' par rang';
+
+      let  needs = '';
+      needs += perk.s === 0 ? '' : 'FOR ' + perk.s + ' ; ';
+      needs += perk.p === 0 ? '' : 'PER ' + perk.p + ' ; ';
+      needs += perk.e === 0 ? '' : 'END ' + perk.e + ' ; ';
+      needs += perk.c === 0 ? '' : 'CHR ' + perk.c + ' ; ';
+      needs += perk.i === 0 ? '' : 'INT ' + perk.i + ' ; ';
+      needs += perk.a === 0 ? '' : 'AGI ' + perk.a + ' ; ';
+      needs += perk.l === 0 ? '' : 'CHA ' + perk.l + ' ; ';
+      needs += perk.canRobot ? '' : 'Non accessible au robot ; ';
+      needs += perk.canCompanion ? '' : 'Non accessible si vous avez déjà un compagnon ; ';
+
+      const source = perk.source === 'CRB' ? 'Livre de base' : 'Guide des colonies';
+
+      Object.assign(perk, {  rank: perk.ranks, lvl: level, needs, Source: source });
+    });
+    return perks;
   }
 
   findByCharacterStats(stats: Stats): PerkDetail[]{

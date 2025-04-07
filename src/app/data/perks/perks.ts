@@ -5,9 +5,21 @@ export const PERKS_DEF_FR: DataTableDefinition[] = [{
   column: 'Name',
   label: 'Nom'
 },{
+  column: 'rank',
+  label: 'Rang'
+},{
+  column: 'lvl',
+  label: 'Niveau'
+},{
+  column: 'needs',
+  label: 'Prérequis'
+},{
   column: 'description',
   label: 'Description'
-}];
+},{
+  column: 'Source',
+  label: 'Source'
+  }];
 
 export const PERKS: PerkDetail[] = [
   {

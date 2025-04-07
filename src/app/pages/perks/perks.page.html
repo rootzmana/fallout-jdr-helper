@@ -76,7 +76,7 @@
 
     <ion-list>
       <ng-container *ngFor="let perk of filteredResult">
-        <ion-list-header><h1>{{ perk.name }}</h1></ion-list-header>
+        <ion-list-header><h1>{{ perk.Name }}</h1></ion-list-header>
         <p>
           <strong>Rangs</strong> : {{ perk.ranks }} <br />
           <strong>Niveau</strong> : {{ perk.ranks === 1 ? 
@@ -96,7 +96,7 @@
           <strong>Description</strong> :
           <app-rich-text-display [propertyText]="perk.description"></app-rich-text-display>
           <br/><br/>
-          <i><sub>Source : {{ perk.source == "CRB" ? ("PERKS.SOURCES.CRB" | translate) :("PERKS.SOURCES.SETTLERS" | translate) }}</sub></i>
+          <i><sub>Source : {{ perk.source === "CRB" ? ("PERKS.SOURCES.CRB" | translate) :("PERKS.SOURCES.SETTLERS" | translate) }}</sub></i>
         </p>
       </ng-container>
     </ion-list>
