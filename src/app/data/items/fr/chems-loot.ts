@@ -1,4 +1,4 @@
-import {DataTableDefinition} from "../../generic-data-lang";
+import { DataTableDefinition } from '../../generic-data-lang';
 
 export const CHEMS_LOOT_DEF_FR: DataTableDefinition[] = [{
   column: 'Name',
@@ -21,7 +21,10 @@ export const CHEMS_LOOT_DEF_FR: DataTableDefinition[] = [{
 }, {
   column: 'Rarity',
   label: 'Rareté'
-}]
+}, {
+  column: 'AddictionEffect',
+  label: 'Effet de dépendance'
+}];
 
 export const CHEMS_LOOT_DATA_FR = [
   {
@@ -32,6 +35,7 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 125,
     Rarity: 3,
+    AddictionEffect : null,
     id: 'c-1'
   },
   {
@@ -42,16 +46,18 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 75,
     Rarity: 3,
+    AddictionEffect : null,
     id: 'c-2'
   },
   {
     Name: 'Baume de soin',
-    Effect: 'Guérit 2 PV (action mineure) ou 4PV (porter secours)',
+    Effect: 'Guérit 2 PV (action mineure "prendre une dose") ou 4 PV (action majeure "porter secours")',
     Duration: 'Instantanée',
     Addictive: 'Non',
     Weight: '<0,5',
     Cost: 20,
     Rarity: 1,
+    AddictionEffect : null,
     id: 'c-3'
   },
   {
@@ -62,56 +68,62 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 40,
     Rarity: 2,
+    AddictionEffect : null,
     id: 'c-4'
   },
   {
     Name: 'Buffjet',
-    Effect: "Réduit de 1 la difficulté de tous vos tests de FOR et d'END (0 minimum), +4 PV max, gagnez immédiatement 3 PA (perdus s'ils ne sont pas dépensés), les actions supplémentaires coûtent 1 PA de moins",
+    Effect: 'Réduit de 1 la difficulté de tous vos tests de FOR et d\'END (0 minimum), +4 PV max, gagnez immédiatement 3 PA (perdus s\'ils ne sont pas dépensés), les actions supplémentaires coûtent 1 PA de moins',
     Duration: 'Brève',
     Addictive: 'Oui 1',
     Weight: '<0,5',
     Cost: 75,
     Rarity: 4,
+    AddictionEffect : 'La difficulté de tous vos tests de FOR et d\'END augmente de +1 quand vous n\'êtes pas sous l\'effet d\'un type de Buffout (Buffout, Buffjet, Bufftats)',
     id: 'c-5'
   },
   {
     Name: 'Buffout',
-    Effect: "Vous pouvez relancer 1d20 sur tous vos tests de FOR et d'END, +3 PV max",
+    Effect: 'Vous pouvez relancer 1d20 sur tous vos tests de FOR et d\'END, +3 PV max',
     Duration: 'Durable',
     Addictive: 'Oui 2',
     Weight: '<0,5',
     Cost: 45,
     Rarity: 2,
+    AddictionEffect : 'La difficulté de tous vos tests de FOR et d\'END augmente de +1 quand vous n\'êtes pas sous l\'effet d\'un type de Buffout (Buffout, Buffjet, Bufftats)',
     id: 'c-6'
   },
   {
     Name: 'Bufftats',
-    Effect: "Réduit de 1 la difficulté de tous vos tests de FOR, de PER et d'END (0 minimum), +4 PV max",
+    Effect: 'Réduit de 1 la difficulté de tous vos tests de FOR, de PER et d\'END (0 minimum), +4 PV max',
     Duration: 'Durable',
     Addictive: 'Oui 1',
     Weight: '<0,5',
     Cost: 75,
     Rarity: 4,
+    AddictionEffect : 'La difficulté de tous vos tests de FOR et d\'END augmente de +1 quand vous n\'êtes pas sous l\'effet d\'un type de Buffout (Buffout, Buffjet, Bufftats)',
     id: 'c-7'
   },
   {
     Name: 'Calmex',
-    Effect: "Vous pouvez relancer 1d20 sur tous vos tests de PER et d'AGI, +2 $CD$ aux dégâts des attaques furtives",
+    Effect: 'Vous pouvez relancer 1d20 sur tous vos tests de PER et d\'AGI, +2 $CD$ aux dégâts des attaques furtives',
     Duration: 'Durable',
     Addictive: 'Oui 1',
     Weight: '<0,5',
     Cost: 100,
     Rarity: 4,
+    AddictionEffect : 'Vous subissez des complications sur vos tests d’AGI sur un résultat de 18 ou plus quand vous n’êtes pas sous l’effet du Calmex',
     id: 'c-8'
   },
   {
     Name: 'Daddy-O',
-    Effect: "Réduit de 1 la difficulté de tous vos tests de PER et d'INT (0 minimum), augmente de +1 la difficulté de vos tests de CHR",
+    Effect: 'Réduit de 1 la difficulté de tous vos tests de PER et d\'INT (0 minimum), augmente de +1 la difficulté de vos tests de CHR',
     Duration: 'Durable',
     Addictive: 'Oui 1',
     Weight: '<0,5',
     Cost: 50,
     Rarity: 2,
+    AddictionEffect : 'La difficulté de tous vos tests de PER et d’INT augmente de +1 quand vous n’êtes pas sous l’effet du Daddy-O',
     id: 'c-9'
   },
   {
@@ -122,6 +134,7 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 40,
     Rarity: 3,
+    AddictionEffect : 'La difficulté de tous vos tests de CHR et de CHA augmente de +1 quand vous n’êtes pas sous l’effet du Daytripper',
     id: 'c-10'
   },
   {
@@ -132,6 +145,7 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 30,
     Rarity: 4,
+    AddictionEffect : 'La difficulté de tous vos tests de FOR et de PER augmente de +1 quand vous n’êtes pas sous l’effet de la Fureur',
     id: 'c-11'
   },
   {
@@ -142,6 +156,7 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 50,
     Rarity: 2,
+    AddictionEffect : 'La difficulté de tous vos tests d\'AGI augmente de +1 quand vous n\'êtes pas sous l\'effet d\'un type de Jet (Jet ou Jet Fuel ; l\'Ultra Jet a un effet de dépendance différent)',
     id: 'c-12'
   },
   {
@@ -152,6 +167,7 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 60,
     Rarity: 3,
+    AddictionEffect : 'La difficulté de tous vos tests d\'AGI augmente de +1 quand vous n\'êtes pas sous l\'effet d\'un type de Jet (Jet ou Jet Fuel ; l\'Ultra Jet a un effet de dépendance différent)',
     id: 'c-13'
   },
   {
@@ -162,36 +178,40 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 50,
     Rarity: 2,
+    AddictionEffect : 'La difficulté de tous vos tests d\'AGI augmente de +1 et vous subissez +1 $CD$ de dégâts supplémentaires sur toutes les attaques balistiques quand vous n’êtes pas sous l’effet du Med-X',
     id: 'c-14'
   },
   {
     Name: 'Mentats',
-    Effect: "Vous pouvez relancer 1d20 sur vos tests de PER et d'INT",
+    Effect: 'Vous pouvez relancer 1d20 sur vos tests de PER et d\'INT',
     Duration: 'Durable',
     Addictive: 'Oui 3',
     Weight: '<0,5',
     Cost: 50,
     Rarity: 2,
+    AddictionEffect : 'La difficulté de tous vos tests de CHR augmente de +1 quand vous n’êtes pas sous l’effet d\'un type de Mentats (normal ou aux fruits)',
     id: 'c-15'
   },
   {
     Name: 'Mentats fruits rouges',
-    Effect: "Réduit de 2 la difficulté de vos tests d'INT (0 minimum)",
+    Effect: 'Réduit de 2 la difficulté de vos tests d\'INT (0 minimum)',
     Duration: 'Durable',
     Addictive: 'Oui 2',
     Weight: '<0,5',
     Cost: 60,
     Rarity: 3,
+    AddictionEffect : 'La difficulté de tous vos tests de CHR augmente de +1 quand vous n’êtes pas sous l’effet d\'un type de Mentats (normal ou aux fruits)',
     id: 'c-16'
   },
   {
     Name: 'Mentats orange',
-    Effect: "Réduit de 2 la difficulté de vos tests de PER (0 minimum), l'action mineure viser vous permet de relancer 1d20 supplémentaire",
+    Effect: 'Réduit de 2 la difficulté de vos tests de PER (0 minimum), l\'action mineure viser vous permet de relancer 1d20 supplémentaire',
     Duration: 'Durable',
     Addictive: 'Oui 2',
     Weight: '<0,5',
     Cost: 60,
     Rarity: 3,
+    AddictionEffect : 'La difficulté de tous vos tests de CHR augmente de +1 quand vous n’êtes pas sous l’effet d\'un type de Mentats (normal ou aux fruits)',
     id: 'c-17'
   },
   {
@@ -202,16 +222,18 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 60,
     Rarity: 3,
+    AddictionEffect : 'La difficulté de tous vos tests de CHR augmente de +1 quand vous n’êtes pas sous l’effet d\'un type de Mentats (normal ou aux fruits)',
     id: 'c-18'
   },
   {
     Name: 'Overdrive',
-    Effect: "+3 $CD$ de dégâts sur toutes vos attaques, vous pouvez relancer jusqu'à 3 $CD$  par jet de dégâts",
+    Effect: '+3 $CD$ de dégâts sur toutes vos attaques, vous pouvez relancer jusqu\'à 3 $CD$  par jet de dégâts',
     Duration: 'Durable',
     Addictive: 'Oui 1',
     Weight: '<0,5',
     Cost: 55,
     Rarity: 3,
+    AddictionEffect : 'La difficulté de tous vos tests de FOR et d\AGI augmente de +1 quand vous n’êtes pas sous l’effet de l\'Overdrive',
     id: 'c-19'
   },
   {
@@ -222,26 +244,29 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 50,
     Rarity: 2,
+    AddictionEffect : 'La difficulté de tous vos tests de FOR augmente de +1 et vous subissez +1 $CD$ de dégâts supplémentaires sur toutes les attaques balistiques quand vous n’êtes pas sous l’effet d’un type de Psycho',
     id: 'c-20'
   },
   {
     Name: 'Psychobuff',
-    Effect: "+2 $CD$ de dégâts sur toutes vos attaques, +4 PV max, réduit de 1 la difficulté de tous vos tests de FOR et d'END (0 minimum)",
+    Effect: '+2 $CD$ de dégâts sur toutes vos attaques, +4 PV max, réduit de 1 la difficulté de tous vos tests de FOR et d\'END (0 minimum)',
     Duration: 'Durable',
     Addictive: 'Oui 1',
     Weight: '<0,5',
     Cost: 70,
     Rarity: 4,
+    AddictionEffect : 'La difficulté de tous vos tests de FOR augmente de +1 et vous subissez +1 $CD$ de dégâts supplémentaires sur toutes les attaques balistiques quand vous n’êtes pas sous l’effet d’un type de Psycho',
     id: 'c-21'
   },
   {
     Name: 'Psycho Jet',
-    Effect: "+2 $CD$ de dégâts sur toutes vos attaques, +4 résistance aux dégâts balistiques, gagnez immédiatement 4 PA (perdus s'ils ne sont pas dépensés)",
+    Effect: '+2 $CD$ de dégâts sur toutes vos attaques, +4 résistance aux dégâts balistiques, gagnez immédiatement 4 PA (perdus s\'ils ne sont pas dépensés)',
     Duration: 'Brève',
     Addictive: 'Oui 1',
     Weight: '<0,5',
     Cost: 70,
     Rarity: 4,
+    AddictionEffect : 'La difficulté de tous vos tests de FOR augmente de +1 et vous subissez +1 $CD$ de dégâts supplémentaires sur toutes les attaques balistiques quand vous n’êtes pas sous l’effet d’un type de Psycho',
     id: 'c-22'
   },
   {
@@ -252,16 +277,18 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 70,
     Rarity: 4,
+    AddictionEffect : 'La difficulté de tous vos tests de FOR augmente de +1 et vous subissez +1 $CD$ de dégâts supplémentaires sur toutes les attaques balistiques quand vous n’êtes pas sous l’effet d’un type de Psycho',
     id: 'c-23'
   },
   {
     Name: 'RadAway',
-    Effect: 'Guérit 4 points de dégâts de radiation (action mineure ou porter secours)',
+    Effect: 'Guérit 4 points de dégâts de radiation (action mineure "prendre une dose" ou action majeure "porter secours" en plus de tout autre effet de guérison)',
     Duration: 'Instantanée',
     Addictive: 'Non',
     Weight: '<0,5',
     Cost: 80,
     Rarity: 2,
+    AddictionEffect : null,
     id: 'c-24'
   },
   {
@@ -272,6 +299,7 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 50,
     Rarity: 1,
+    AddictionEffect : null,
     id: 'c-25'
   },
   {
@@ -282,6 +310,7 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 40,
     Rarity: 2,
+    AddictionEffect : null,
     id: 'c-26'
   },
   {
@@ -292,16 +321,18 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 25,
     Rarity: 1,
+    AddictionEffect : null,
     id: 'c-27'
   },
   {
     Name: 'Stimpak',
-    Effect: 'Guérit 4 PV ou une blessure via action mineure ou porter secours',
+    Effect: 'Guérit 4 PV ou une blessure (action mineure "prendre une dose" ou action majeure "porter secours" en plus de tout autre effet de guérison)',
     Duration: 'Instantanée',
     Addictive: 'Non',
     Weight: '<0,5',
     Cost: 50,
     Rarity: 2,
+    AddictionEffect : null,
     id: 'c-28'
   },
   {
@@ -312,26 +343,29 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 30,
     Rarity: 1,
+    AddictionEffect : null,
     id: 'c-29'
   },
   {
     Name: 'Super Stimpak',
-    Effect: 'Guérit 8 PV et max deux blessures, via ation mineure ou porter secours',
+    Effect: 'Guérit 8 PV et jusqu\'à deux blessures (action mineure "prendre une dose" ou action majeure "porter secours" en plus de tout autre effet de guérison)',
     Duration: 'Instantanée',
     Addictive: 'Non',
     Weight: '<0,5',
     Cost: 90,
     Rarity: 4,
+    AddictionEffect : null,
     id: 'c-30'
   },
   {
     Name: 'Ultra Jet',
-    Effect: "Gagnez immédiatement 6 PA (perdus s'ils ne sont pas dépensés), les actions supplémentaires coûtent 1 PA de moins",
+    Effect: 'Gagnez immédiatement 6 PA (perdus s\'ils ne sont pas dépensés), les actions supplémentaires coûtent 1 PA de moins',
     Duration: 'Brève',
     Addictive: 'Oui 3',
     Weight: '<0,5',
     Cost: 67,
     Rarity: 2,
+    AddictionEffect : 'La difficulté de tous vos tests d’AGI augmente de +1 et, si vous réussissez un test de compétence, vous générez 1 PA de moins (0 minimum) quand vous n’êtes pas sous l’effet de l’Ultra Jet. Cette dépendance est permanente et ne peut être soignée par aucun moyen connu',
     id: 'c-31'
   },
   {
@@ -342,8 +376,7 @@ export const CHEMS_LOOT_DATA_FR = [
     Weight: '<0,5',
     Cost: 60,
     Rarity: 4,
+    AddictionEffect : 'La difficulté de tous vos tests augmente de +1 quand vous n’êtes pas sous l’effet du X-Cell',
     id: 'c-32'
   }
-]
-
-
+];
