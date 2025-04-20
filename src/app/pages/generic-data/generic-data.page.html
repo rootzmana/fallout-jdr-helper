@@ -8,6 +8,9 @@
     <ion-title class="ion-text-capitalize">{{dataId.label}}</ion-title>
   </ion-toolbar>
   <ion-toolbar>
+    <app-generic-data-rules-details-display [genericItemsRules]="dataId.rules"></app-generic-data-rules-details-display>
+  </ion-toolbar>
+  <ion-toolbar>
     <ion-searchbar [(ngModel)]="searchText"></ion-searchbar>
   </ion-toolbar>
   <ion-segment (ionChange)="sortTypeChanged($event)" [value]="sortType">

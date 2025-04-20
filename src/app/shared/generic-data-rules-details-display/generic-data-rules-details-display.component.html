@@ -1,0 +1,4 @@
+<ng-container *ngFor="let data of genericItemsRules">
+  <strong>{{data.title}}</strong>
+  <app-rich-text-display [propertyText]="('' + data.description)"></app-rich-text-display>
+</ng-container>

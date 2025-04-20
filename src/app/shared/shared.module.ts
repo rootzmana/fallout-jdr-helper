@@ -9,7 +9,8 @@ import {FormsModule} from '@angular/forms';
 import {ModsDisplayModalComponent} from './mods-display-modal/mods-display-modal.component';
 import {GenericDataSearchPipe, GenericTitleSearchPipe} from '../pipes/generic-data-search.pipe';
 import {SortByPipe} from '../pipes/sort-by.pipe';
-import {TranslateModule} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { GenericDataRulesDetailsDisplayComponent } from './generic-data-rules-details-display/generic-data-rules-details-display.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import {TranslateModule} from '@ngx-translate/core';
     ModsDisplayModalComponent,
     GenericTitleSearchPipe,
     GenericDataSearchPipe,
-    SortByPipe],
+    SortByPipe,
+    GenericDataRulesDetailsDisplayComponent
+  ],
   exports: [
     RichTextDisplayComponent,
     GenericDataDisplayComponent,
@@ -30,7 +33,8 @@ import {TranslateModule} from '@ngx-translate/core';
     GenericTitleSearchPipe,
     GenericDataSearchPipe,
     SortByPipe,
-    TranslateModule
+    TranslateModule,
+    GenericDataRulesDetailsDisplayComponent,
   ],
   imports: [
     CommonModule,

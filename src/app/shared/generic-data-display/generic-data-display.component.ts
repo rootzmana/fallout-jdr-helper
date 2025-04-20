@@ -89,6 +89,7 @@ export class GenericDataDisplayComponent implements OnInit {
       definition: RECIPE_DEF[this.languageService.getCurrentLanguage()],
       moddable: false,
       data: [],
+      rules: [],
       type: 'Recipe',
       icon: '',
       label: '',

@@ -51,6 +51,7 @@ export class AppComponent implements OnInit {
       icon,
       data: [],
       definition: [],
+      rules: [],
       generic: false,
       moddable: false
     };

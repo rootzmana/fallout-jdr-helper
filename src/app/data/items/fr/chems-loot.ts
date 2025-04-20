@@ -26,6 +26,14 @@ export const CHEMS_LOOT_DEF_FR: DataTableDefinition[] = [{
   label: 'Effet de dépendance'
 }];
 
+export const CHEMS_RULES_FR = [{
+  title: 'titre 1',
+  description: 'desc 1'
+}, {
+  title: 'titre 2',
+  description: 'desc 2'
+}];
+
 export const CHEMS_LOOT_DATA_FR = [
   {
     Name: 'Addictol',
