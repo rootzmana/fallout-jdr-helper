@@ -26,12 +26,23 @@ export const CHEMS_LOOT_DEF_FR: DataTableDefinition[] = [{
   label: 'Effet de dépendance'
 }];
 
-export const CHEMS_RULES_FR = [{
-  title: 'titre 1',
-  description: 'desc 1'
+export const CHEMS_RULES_FR = [
+  {
+    title: 'Utilisation des drogues',
+    description: 'Vous pouvez prendre vous-même une drogue ou l’administrer à quelqu’un d’autre (qui doit être consentant) à portée de main en utilisant l’action mineure "prendre une dose". $BR$ Les bénéfices des drogues ne se cumulent pas : si deux drogues fournissent le même bénéfice ou si vous prenez deux doses de la même drogue, la dose prise en dernier est celle qui s’applique.'
+
+  }, {
+    title: 'Addiction aux drogues',
+    description: 'Beaucoup de drogues sont addictives. Quand vous prenez une drogue addictive, lancez un nombre de $CD$ égal au nombre de doses que vous avez prises pendant cette partie. Si vous obtenez un nombre d’Effets supérieur ou égal à la valeur de dépendance de cette drogue (indiquée après « Oui » dans la ligne  « Addictif? » ci-dessous), vous êtes devenu dépendant à cette drogue. Voir l\'effet de dépendance associé dans la description de la drogue.'
+  }, {
+    title: 'Durée des drogues',
+    description: 'Les effets d’une drogue peuvent être Instantanés (elle a un effet dès qu’elle est prise, puis l’effet prend fin), Brefs (jusqu’à la fin de votre tour actuel ou jusqu’à la fin du prochain tour de celui à qui vous l’avez administrée) ou Durables (l’effet dure jusqu’à la fin de la scène actuelle). $BR$ L’aptitude Chimie et l’amélioration d’armure BioCommMesh augmentent la durée des drogues prises.Pas d\'effet sur les drogues à durée Instantanée. Les drogues à durée Brève durent deux rounds. Les drogues à durée Durable font effet jusqu’à la fin de la prochaine scène et non jusqu’à la fin de la scène actuelle'
+  }, {
+  title: 'Les goules et les drogues',
+  description: 'Les goules reçoivent les bénéfices des Stimpaks et des autres objets de guérison normalement. $BR$ Déjà immunisées contre les radiations, les Rad-X et les RadAway n’ont pas d’effet sur les goules. $BR$ L’Addictol et les antibiotiques fonctionnent normalement, mais les goules ont moins de risques de devenir dépendantes et sont immunisées contre beaucoup de maladies. $BR$ Si une goule tente d’utiliser n’importe quelle autre drogue que celles mentionnées, elle doit utiliser 2 doses pour obtenir l’effet escompté.'
 }, {
-  title: 'titre 2',
-  description: 'desc 2'
+  title: 'Porter secours',
+  description: 'Les baumes de soin, le RadAway et les Stimpaks peuvent tous être appliqués pendant une action porter secours, augmentant l’effet de cette action d’une manière spécifique. Mais une seule drogue peut être appliquée de cette manière pendant une seule action porter secours.'
 }];
 
 export const CHEMS_LOOT_DATA_FR = [
